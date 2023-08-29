@@ -606,7 +606,7 @@ document.addEventListener("DOMContentLoaded", function () {
             age: formData.get('contactAge')
         };
 
-        fetch('http://localhost:8080/api/register', {
+        fetch('/api/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -666,14 +666,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Fetch news data from the API
-    fetch('http://localhost:8080/api/news')
+    fetch('/api/news')
         .then(response => response.json())
         .then(data => {
             const clientsContainer = document.querySelector('.clients');
             
             // Loop through the news data and create image links
             data.forEach(news => {
-                const imageUrl = `http://localhost:8080/api/image?fileName=${news.imageSrc}`;
+                const imageUrl = `api/image?fileName=${news.imageSrc}`;
                 
                 // Create the template string with dynamic values
                 const template = `

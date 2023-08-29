@@ -317,14 +317,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Fetch news data from the API
-    fetch('http://localhost:8080/api/news')
+    fetch('/api/news')
         .then(response => response.json())
         .then(data => {
             const clientsContainer = document.querySelector('.clients');
             
             // Loop through the news data and create image links
             data.forEach(news => {
-                const imageUrl = `http://localhost:8080/api/image?fileName=${news.imageSrc}`;
+                const imageUrl = `/api/image?fileName=${news.imageSrc}`;
                 
                 // Create the template string with dynamic values
                 const template = `
@@ -361,12 +361,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const id = getQueryParam('id');
 
     // Fetch news data by id
-    fetch(`http://localhost:8080/api/news/${id}`)
+    fetch(`/api/news/${id}`)
         .then(response => response.json())
         .then(data => {
             // Update the content area with news details
             document.getElementById('newsTitle').textContent = data.title;
-            document.getElementById('newsImage').src = `http://localhost:8080/api/image?fileName=${data.imageSrc}`;
+            document.getElementById('newsImage').src = `/api/image?fileName=${data.imageSrc}`;
             document.getElementById('newsContent').innerHTML = data.content;
         })
         .catch(error => {
