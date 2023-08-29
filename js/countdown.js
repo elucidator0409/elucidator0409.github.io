@@ -26,14 +26,14 @@
           const now = new Date().getTime(),
                 distance = countDown - now;
   
-          document.getElementById("days").innerHTML = Math.floor(distance / (day)),
-            document.getElementById("hours").innerHTML = Math.floor((distance % (day)) / (hour)),
-            document.getElementById("minutes").innerHTML = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById("seconds").innerHTML = Math.floor((distance % (minute)) / second);
-  
-          //do something later when date is reached
-          if (distance < 0) {
-            document.getElementById("headline").innerHTML = "It's my birthday!";
+                document.getElementById("register").innerText = Math.floor(distance / (day)),
+                document.getElementById("online").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("offline").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("hackathon").innerText = Math.floor((distance % (minute)) / second);
+    
+              //do something later when date is reached
+              if (distance < 0) {
+                document.getElementById("headline").innerText = "It's show time!";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
