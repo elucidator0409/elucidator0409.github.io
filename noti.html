@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/noti.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 
+    <script src="js/globalConfig.js"></script>
+
+
     <!-- <script src="js/modernizr.js"></script> -->
     <script src="js/pace.min.js"></script>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -300,9 +303,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function loadJS(FILE_URL, async = false) {
         let scriptEle = document.createElement("script");
 
-        scriptEle.setAttribute("src", FILE_URL);
-        scriptEle.setAttribute("type", "text/javascript");
-        scriptEle.setAttribute("async", '');
+        // scriptEle.setAttribute("src", FILE_URL);
+        // scriptEle.setAttribute("type", "text/javascript");
+        // scriptEle.setAttribute("async", '');
+        scriptEle.src = FILE_URL;
+        scriptEle.async = false;
 
         document.body.appendChild(scriptEle);
 
@@ -317,34 +322,62 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Fetch news data from the API
-    fetch('/api/news')
-        .then(response => response.json())
-        .then(data => {
-            const clientsContainer = document.querySelector('.clients');
-            
-            // Loop through the news data and create image links
-            data.forEach(news => {
-                const imageUrl = `/api/image?fileName=${news.imageSrc}`;
-                
-                // Create the template string with dynamic values
-                const template = `
-                    <a href="noti.html?id=${news.id}" title="" class="clients__slide">
-                        <img src="${imageUrl}" style="width:100%; height:250px" />
-                    </a>`;
-                
-                // Convert the template string to a DOM element
-                const templateElement = document.createRange().createContextualFragment(template);
-                
-                // Append the template element to the clients container
-                clientsContainer.appendChild(templateElement);
-                
-            });        
-            loadJS("js/noti.js", false);
-            console.log("Fetch completed ")
+    console.log(API_DOMAIN + '/api/news')
+
+    fetch(API_DOMAIN + '/api/news', {
+  method: 'GET',
+  headers: {
+    'ngrok-skip-browser-warning': '69420',
+  },
+})
+  .then(response => response.json())
+  .then(data => {
+    const clientsContainer = document.querySelector('.clients');
+
+    // Loop through the news data and create image links
+
+      const loadAllImagesPromise = data.map(news => {
+        const imageUrl = API_DOMAIN + `/api/image?fileName=${news.imageSrc}`;
+
+        return fetch(imageUrl, {
+        method: 'GET',
+        headers: {
+          'ngrok-skip-browser-warning': '69420',
+        },
+        mode: 'cors', // Set the mode to 'cors' to avoid CORB
+      })
+        .then(imageResponse => imageResponse.blob())
+        .then(blobData => {
+          // Convert the blob to an object URL
+          const imgObjectUrl = URL.createObjectURL(blobData);
+
+          // Create the template string with dynamic values
+          const template = `
+            <a href="noti.html?id=${news.id}" title="" class="clients__slide">
+                <img src="${imgObjectUrl}" style="width:100%; height:250px"/>
+            </a>`;
+
+          // Convert the template string to a DOM element
+          const templateElement = document.createRange().createContextualFragment(template);
+
+          // Append the template element to the clients container
+          clientsContainer.appendChild(templateElement);
         })
-        .catch(error => {
-            console.error('Error fetching news:', error);
+      })
+
+      Promise.all(loadAllImagesPromise).then(() => {
+        loadJS('js/main.js', false);
+      }).catch(imageError => {
+          console.error('Error fetching image:', imageError);
         });
+        
+
+    console.log('Fetch completed');
+  })
+  .catch(error => {
+    console.error('Error fetching news:', error);
+  });
+
 
     
     
@@ -361,12 +394,34 @@ document.addEventListener("DOMContentLoaded", function () {
     const id = getQueryParam('id');
 
     // Fetch news data by id
-    fetch(`/api/news/${id}`)
+    fetch(API_DOMAIN + `/api/news/${id}`, {
+  method: 'GET',
+  headers: {
+    'ngrok-skip-browser-warning': '69420',
+  },
+})
         .then(response => response.json())
         .then(data => {
             // Update the content area with news details
             document.getElementById('newsTitle').textContent = data.title;
-            document.getElementById('newsImage').src = `/api/image?fileName=${data.imageSrc}`;
+            const imageUrl = API_DOMAIN + `/api/image?fileName=${data.imageSrc}`;;
+
+            fetch(imageUrl, {
+                method: 'GET',
+                headers: {
+                'ngrok-skip-browser-warning': '69420',
+                },
+                mode: 'cors', // Set the mode to 'cors' to avoid CORB
+            })
+                .then(imageResponse => imageResponse.blob())
+                .then(blobData => {
+                // Convert the blob to an object URL
+                const imgObjectUrl = URL.createObjectURL(blobData);
+                document.getElementById('newsImage').src = imgObjectUrl;
+                }).catch(imageError => {
+            console.error('Error fetching image:', imageError);
+            });
+
             document.getElementById('newsContent').innerHTML = data.content;
         })
         .catch(error => {
