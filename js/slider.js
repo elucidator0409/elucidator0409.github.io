@@ -16,27 +16,27 @@ var clSlickSlider = function() {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 5
+                    slidesToShow: 4
                 }
             },
             {
                 breakpoint: 1000,
                 settings: {
-                    slidesToShow: 4
+                    slidesToShow: 3
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 786,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 2
                 }
             },
             {
                 breakpoint: 500,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToShow: 1,
+                    slidesToScroll: 1
                 }
             }
 
