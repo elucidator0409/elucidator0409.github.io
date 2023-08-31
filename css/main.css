@@ -2177,7 +2177,7 @@ html.cl-loaded .home-content__main {
         width: 100%;
         background-size: cover;
         display: flex;
-        min-height: 23vh;
+        min-height: 24vh;
     }
     .home-content h1 {
         font-size: 3.2rem;
@@ -2396,7 +2396,7 @@ html.cl-loaded .home-content__main {
     }
     .stats__col::after {
         content: "";
-        display: block;
+        display: none;
         height: 1px;
         width: 250px;
         background-color: rgba(255, 255, 255, 0.25);
@@ -3988,9 +3988,12 @@ footer .row {
 }
 @media screen and (max-width: 576px) {
     .mb-3-content {
-        font-size: 23px;
-        line-height: 40px;
-        font-weight: 300;
+        font-family: "SVN-Gilroy", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: justify;
     }
 }
 .text-award {
