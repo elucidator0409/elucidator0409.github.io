@@ -3977,6 +3977,7 @@ footer .row {
     text-align: left;
     text-transform: uppercase;
 }
+
 .mb-3-content {
     font-family: "SVN-Gilroy", sans-serif;
     font-size: 30px;
@@ -3989,11 +3990,14 @@ footer .row {
 @media screen and (max-width: 576px) {
     .mb-3-content {
         font-family: "SVN-Gilroy", sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 31px;
     letter-spacing: 0em;
     text-align: justify;
+    }
+    .mb-3 {
+        font-size: 20px;
     }
 }
 .text-award {
