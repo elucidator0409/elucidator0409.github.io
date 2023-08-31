@@ -478,11 +478,13 @@ textarea {
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 600px) {
     .row {
-        padding-left: 25px;
-        /* padding-right: 25px; */
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+        flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 25px;
+    /* padding-right: 25px; */
+    width: 100%;
+    /* display: flex; */
     }
     .row .row {
         margin-left: -10px;
