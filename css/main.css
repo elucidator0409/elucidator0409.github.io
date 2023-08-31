@@ -1192,6 +1192,11 @@ input::-moz-focus-inner {
     margin-top: 0;
     text-transform: uppercase;
 }
+@media screen and (max-width:576px) {
+    .display-3 {
+        font-size: 25px;
+    }
+}
 
 .display-2--light {
     color: #0a4e80;
@@ -1253,7 +1258,7 @@ input::-moz-focus-inner {
         font-size: 3.3rem !important;
     }
     .subhead {
-        margin-top: 15rem;
+        margin-top: 5rem;
         font-size: 3rem !important;
     }
 }
@@ -2267,6 +2272,14 @@ html.cl-loaded .home-content__main {
     .content-1 {
         width: 88% !important;
     }
+    .about-content3 {
+        font-family: "SVN-Gilroy", sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 31px;
+        letter-spacing: -0.5px;
+        text-align: justify;
+    }
     .about-content2 {
         font-family: "SVN-Gilroy", sans-serif;
         font-size: 14px;
@@ -3192,6 +3205,9 @@ html.cl-loaded .home-content__main {
     font-size: 1.5rem;
     line-height: 2;
     position: relative;
+
+    
+      
 }
 
 .contact-content h3 {
@@ -3534,17 +3550,18 @@ html.cl-loaded .home-content__main {
         text-align: center;
         flex-direction: column !important;
     display: flex !important;
+    background-color: unset;
     }
     .contact-primary,
     .contact-secondary {
-        padding: 0 20px;
+        margin: 0 auto;
     }
 }
 
 @media only screen and (max-width: 400px) {
     .contact-primary,
     .contact-secondary {
-        padding: 0 5px;
+        margin: 0 auto;
     }
 }
 
