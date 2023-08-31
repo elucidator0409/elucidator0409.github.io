@@ -2269,10 +2269,10 @@ html.cl-loaded .home-content__main {
     }
     .about-content2 {
         font-family: "SVN-Gilroy", sans-serif;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 300;
         line-height: 31px;
-        letter-spacing: 0em;
+        letter-spacing: 0px;
         text-align: justify;
     }
 }
