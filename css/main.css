@@ -61,7 +61,7 @@
  * # base style overrides
  *
  * ------------------------------------------------------------------- */
-html {
+ html {
     font-size: 10px;
 }
 
@@ -1697,8 +1697,9 @@ input::-moz-focus-inner {
     }
     .header-menu-toggle {
         /* right for display menu */
-        right: 20px;
+        right: 0px;
         background-color: black;
+        position: absolute;
     }
 }
 
@@ -2147,14 +2148,7 @@ html.cl-loaded .home-content__main {
 }
 
 @media only screen and (max-width: 500px) {
-    .s-home {
-        /* min-width: 400px; */
-        /* width: auto; */
-        background-size: cover;
-        /* background-image: url(../images/banner-section1-mobile.png); */
-        /* min-height: 188px; */
-        background-position: center center;
-    }
+    
     .home-content h1 {
         font-size: 3.5rem;
     }
@@ -2207,7 +2201,7 @@ html.cl-loaded .home-content__main {
         width: 100%;
         background-size: cover;
         display: flex;
-        min-height: 33vh;
+        min-height: 23vh;
     }
 }
 /* ===================================================================
@@ -2255,7 +2249,7 @@ html.cl-loaded .home-content__main {
     text-align: left;
     margin-bottom: 24px;
 }
-.about-content1 {
+.about-content2 {
     font-family: "SVN-Gilroy", sans-serif;
     font-size: 26px;
     font-weight: 300;
@@ -2272,6 +2266,14 @@ html.cl-loaded .home-content__main {
     }
     .content-1 {
         width: 88% !important;
+    }
+    .about-content2 {
+        font-family: "SVN-Gilroy", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 31px;
+        letter-spacing: 0em;
+        text-align: justify;
     }
 }
 
@@ -2296,7 +2298,7 @@ html.cl-loaded .home-content__main {
 }
 
 .stats__count {
-    font-family: "montserrat-bold", sans-serif;
+    font-family: "SVN-Gilroy", sans-serif;
     font-size: 8.4rem;
     line-height: 1;
     color: #ffffff;
@@ -2307,7 +2309,7 @@ html.cl-loaded .home-content__main {
 }
 
 .stats h5 {
-    font-family: "montserrat-semibold", sans-serif;
+    font-family: "SVN-Gilroy", sans-serif;
     margin-top: 1.8rem;
     color: #000000;
     font-size: 1.8rem;
@@ -2362,6 +2364,7 @@ html.cl-loaded .home-content__main {
     }
     .stats h5 {
         margin-top: 1.2rem;
+        font-size: 1rem;
     }
 }
 
@@ -2428,7 +2431,7 @@ html.cl-loaded .home-content__main {
         width: 88% !important;
     }
     .about-content {
-        font-size: 15px;
+        font-size: 18px;
     }
 }
 
@@ -3529,6 +3532,8 @@ html.cl-loaded .home-content__main {
     .contact-content {
         padding-bottom: 12rem;
         text-align: center;
+        flex-direction: column !important;
+    display: flex !important;
     }
     .contact-primary,
     .contact-secondary {
@@ -3827,7 +3832,9 @@ footer .row {
     border-top-right-radius: 4px;
     /* margin: 0 auto; */
     position: relative;
-    padding: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+
     list-style: none;
     text-align: left;
 }
@@ -3835,7 +3842,11 @@ footer .row {
 @media (max-width: 767px) {
     .timeline-1 {
         max-width: 98%;
-        padding: 25px;
+        /* padding: 25px; */
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: unset;
+        padding-bottom: unset;
     }
 }
 
@@ -3893,7 +3904,7 @@ footer .row {
     width: 9px;
     background-color: #0a4e80;
     content: "";
-    top: 5px;
+    top: 0px;
 }
 
 @media (max-width: 767px) {
@@ -3991,8 +4002,6 @@ footer .row {
     line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
-    letter-spacing: 0em;
-    text-align: inherit;
     color: #67a7a3;
     width: 58%;
     /* align-self: flex-end; */
@@ -4271,8 +4280,7 @@ p {
 }
 /* CSS Responsive for timeline table */
 @media screen and (max-width: 576px) {
-    .pt-3,
-    .py-3 {
+    .pt-3{
         padding-top: unset !important;
     }
 }
