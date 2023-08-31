@@ -862,10 +862,14 @@ input[type="button"].btn--primary:focus {
 
 .btn.full-width,
 button.full-width {
-    width: 100%;
-    margin-right: 0;
-    max-width: 300px;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Các thuộc tính khác của button */
+        color: #ffffff;
+        border: none;
+        cursor: pointer;
+      }
 
 .btn--stroke,
 button.btn--stroke {
@@ -2203,7 +2207,8 @@ html.cl-loaded .home-content__main {
         width: 100%;
         background-size: cover;
         display: flex;
-        min-height: 33vh;}
+        min-height: 33vh;
+    }
 }
 /* ===================================================================
  * # about
@@ -2241,9 +2246,22 @@ html.cl-loaded .home-content__main {
     font-weight: 600;
 } */
 .about-content {
-    text-align: justify;
-    font-size: 23px;
+    /* font-size: 23px; */
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 30px;
     font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 24px;
+}
+.about-content1 {
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: justify;
 }
 @media screen and (max-width: 576px) {
     .about-content {
@@ -2401,7 +2419,7 @@ html.cl-loaded .home-content__main {
         font-size: 1.8rem;
     }
     .stats__count {
-        font-size: 7.8rem;
+        font-size: 2.8rem;
     }
     .about__line {
         display: none;
@@ -3194,7 +3212,7 @@ html.cl-loaded .home-content__main {
 .contact-content textarea,
 .contact-content select {
     color: rgba(255, 255, 255, 0.6);
-    border-bottom: 2px solid #4AD9CC;
+    border-bottom: 2px solid #4ad9cc;
     margin-bottom: 0.9rem;
     width: 30rem;
 }
@@ -3220,31 +3238,31 @@ html.cl-loaded .home-content__main {
 .contact-content input::-webkit-input-placeholder,
 .contact-content select::-webkit-input-placeholder,
 .contact-content textarea::-webkit-input-placeholder {
-    color: #4AD9CC;
+    color: #4ad9cc;
 }
 
 .contact-content input:-moz-placeholder,
 .contact-content select:-moz-placeholder,
 .contact-content textarea:-moz-placeholder {
-    color: #4AD9CC; /* Firefox 18- */
+    color: #4ad9cc; /* Firefox 18- */
 }
 
 .contact-content input::-moz-placeholder,
 .contact-content select::-moz-placeholder,
 .contact-content textarea::-moz-placeholder {
-    color: #4AD9CC; /* Firefox 19+ */
+    color: #4ad9cc; /* Firefox 19+ */
 }
 
 .contact-content input:-ms-input-placeholder,
 .contact-content select:-ms-input-placeholder,
 .contact-content textarea:-ms-input-placeholder {
-    color: #4AD9CC;
+    color: #4ad9cc;
 }
 
 .contact-content input.placeholder,
 .contact-content select.placeholder,
 .contact-content textarea.placeholder {
-    color: #4AD9CC!important;
+    color: #4ad9cc !important;
 }
 .contact-primary,
 .contact-secondary {
@@ -3954,7 +3972,7 @@ footer .row {
     font-weight: 400;
     line-height: 35px;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: justify;
     color: #ffffff;
 }
 @media screen and (max-width: 576px) {
@@ -3976,7 +3994,7 @@ footer .row {
     letter-spacing: 0em;
     text-align: inherit;
     color: #67a7a3;
-    width: 45%;
+    width: 58%;
     /* align-self: flex-end; */
     margin-bottom: 0;
 }
@@ -4003,6 +4021,12 @@ footer .row {
 }
 
 .award-layout {
+    display: flex;
+    width: fit-content;
+    gap: 20px;
+    padding-top: 50px;
+}
+.award-layout1 {
     display: flex;
     padding: 10px;
     width: fit-content;
@@ -4168,21 +4192,21 @@ p {
     color: red;
 }
 .content-1 {
-    width: 70%;
+    width: 83%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
 }
 .img-award1 {
-    width: 95px;
-    height: 97px;
+    width: 120px;
+    height: 180px;
     align-self: flex-end;
 }
 
 @media only screen and (max-width: 576px) {
     .img-award1 {
-        align-items: flex-end;
+        align-items: flex-start;
         /* margin-top: -20px; */
         width: 130px;
         height: 109px;
@@ -4252,5 +4276,3 @@ p {
         padding-top: unset !important;
     }
 }
-
-
