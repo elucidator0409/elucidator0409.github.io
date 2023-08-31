@@ -26,7 +26,6 @@
  *
  * =================================================================== */
 
-
 /* ===================================================================
  * # imports 
  *
@@ -34,7 +33,6 @@
 @import url("font-awesome/css/font-awesome.min.css");
 @import url("micons/micons.css");
 @import url("fonts.css");
-
 
 /* ===================================================================
  * # normalize
@@ -53,7 +51,6 @@ body {
     margin: 0;
 }
 
-
 aside,
 footer,
 header,
@@ -66,7 +63,6 @@ h1 {
     font-size: 2em;
     margin: 0.67em 0;
 }
-
 
 main {
     display: block;
@@ -246,7 +242,6 @@ textarea {
     -webkit-appearance: none;
 }
 
-
 menu {
     display: block;
 }
@@ -262,7 +257,6 @@ template {
 [hidden] {
     display: none;
 }
-
 
 /* ===================================================================
  * # basic/base setup styles
@@ -295,7 +289,6 @@ button {
     -webkit-font-smoothing: antialiased;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## Media
  * ------------------------------------------------------------------- */
@@ -304,7 +297,6 @@ video {
     max-width: 100%;
     height: auto;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## Typography resets 
@@ -372,7 +364,6 @@ li {
     display: block;
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## links 
  * ------------------------------------------------------------------- */
@@ -384,7 +375,6 @@ a {
 a img {
     border: none;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## inputs 
@@ -409,7 +399,6 @@ textarea {
     appearance: none;
 }
 
-
 /* ===================================================================
  * # grid
  *
@@ -418,7 +407,7 @@ textarea {
     width: 94%;
     max-width: 1200px;
     padding-left: 100px;
-margin: 0 auto !important;
+    margin: 0 auto !important;
 }
 
 .row:after {
@@ -434,7 +423,6 @@ margin: 0 auto !important;
     margin-right: -20px; */
 }
 
-
 /* column blocks
  * -------------------------------------- */
 [class*="col-"] {
@@ -442,10 +430,9 @@ margin: 0 auto !important;
     padding: 0 100px;
 }
 
-[class*="col-"]+[class*="col-"].end {
+[class*="col-"] + [class*="col-"].end {
     float: right;
 }
-
 
 /* column width classes 
  * -------------------------------------- */
@@ -457,10 +444,9 @@ margin: 0 auto !important;
 .col-twelve,
 .col-full {
     width: 100%;
-    
+
     padding-bottom: 35px;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## medium size devices
@@ -475,7 +461,6 @@ margin: 0 auto !important;
     }
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## tablets
  * ------------------------------------------------------------------- */
@@ -488,27 +473,25 @@ margin: 0 auto !important;
     }
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## mobile devices
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 600px) {
     .row {
         padding-left: 25px;
-        padding-right: 25px;
+        /* padding-right: 25px; */
         width: 100%;
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
     .row .row {
         margin-left: -10px;
         margin-right: -10px;
     }
     [class*="col-"] {
-        padding: 0 10px;
+        padding-left: 0;
     }
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## small mobile devices
@@ -532,11 +515,10 @@ margin: 0 auto !important;
         margin-right: 0;
         padding: 0;
     }
-    [class*="col-"]+[class*="col-"].end {
+    [class*="col-"] + [class*="col-"].end {
         float: none;
     }
 }
-
 
 /* ===================================================================
  * # block grids
@@ -558,18 +540,15 @@ margin: 0 auto !important;
     width: 50%;
 }
 
-
 /**
  * Clearing for block grid columns. Allow columns with 
  * different heights to align properly.
  */
 
-
-.block-1-4 .col-block:nth-child(4n+1),
-.block-1-2 .col-block:nth-child(2n+1) {
+.block-1-4 .col-block:nth-child(4n + 1),
+.block-1-2 .col-block:nth-child(2n + 1) {
     clear: both;
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## medium size devices
@@ -581,12 +560,11 @@ margin: 0 auto !important;
     [class*="block-m-"] .col-block:nth-child(n) {
         clear: none;
     }
-    
-    .block-m-1-2 .col-block:nth-child(2n+1) {
+
+    .block-m-1-2 .col-block:nth-child(2n + 1) {
         clear: both;
     }
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## tablets
@@ -601,7 +579,6 @@ margin: 0 auto !important;
     }
 }
 
-
 /* ------------------------------------------------------------------- 
  * ## mobile devices
  * ------------------------------------------------------------------- */
@@ -614,7 +591,6 @@ margin: 0 auto !important;
         clear: none;
     }
 }
-
 
 /* ------------------------------------------------------------------- 
  * ## small mobile devices
@@ -633,7 +609,6 @@ margin: 0 auto !important;
     }
 }
 
-
 /* ===================================================================
  * # MISC
  *
@@ -643,7 +618,6 @@ margin: 0 auto !important;
     display: table;
     clear: both;
 }
-
 
 /* Misc Helper Styles
  * -------------------------------------- */
@@ -669,6 +643,15 @@ margin: 0 auto !important;
 }
 .col-6 {
     max-width: 100% !important;
+}
+
+/* image witdh 576px mobile */
+@media screen and (max-width: 576px) {
+    .line_bar {
+        width: 80%;
+        /* Các thuộc tính khác nếu cần */
+        height: 25px;
+    }
 }
 
 /*# sourceMappingURL=base.css.map */
