@@ -223,7 +223,6 @@
             </div>
             <h5 style="color: #67a7a3">Second</h5>
           </div>
-          <div class="col-block stats__col"></div>
         </div>
         <div class="col-full">
           <h3 class="subhead subhead--dark">About us</h3>
@@ -320,7 +319,7 @@
                   </p>
                 </li>
                 <li class="event" data-date="">
-                  <h4 class="mb-3 pt-3">Vòng trực tuyến</h4>
+                  <h4 class="mb-3 pt-3">Vòng 1</h4>
                   <p class="mb-3-content">
                     Từ ngày 02/10/2023 đến ngày 08/12/2023: Thí sinh được cung
                     cấp tài khoản tự học trên nền tảng Global Platform trong 10
@@ -329,7 +328,7 @@
                   </p>
                 </li>
                 <li class="event" data-date="">
-                  <h4 class="mb-3 pt-3">Vòng trực tiếp</h4>
+                  <h4 class="mb-3 pt-3">Vòng 2</h4>
                   <p class="mb-3-content">
                     Từ ngày 11/12/2023 đến ngày 22/12/2023 thí sinh sẽ được đào
                     tạo chuyên sâu, tham gia làm Project với Giảng viên. Kết quả
@@ -338,7 +337,7 @@
                   </p>
                 </li>
                 <li class="event" data-date="">
-                  <h4 class="mb-3 pt-3">Vòng Chung kết</h4>
+                  <h4 class="mb-3 pt-3">Vòng 3</h4>
                   <p class="mb-3-content">
                     Từ ngày 30/12/2023 đến ngày 31/12/2023, thí sinh sẽ tham gia
                     Bootcamp 2 ngày 1 đêm. <br />
@@ -585,11 +584,11 @@
                 alt=""
             /></a>
             <div class="cinfo">
-              <h5>Website Ban tổ chức</h5>
               <p>
-                ATCOLLABO I CODE.PRESSO<br />
-                Fanpage: ATCOLLABO<br />
-                Hotline: 036 - 233 - 7288 <br />Email: info@atcollabo.com
+                Website Ban tổ chức: <br>
+                ATCOLLABO I CODE.PRESSO<br /> <br>
+                Fanpage: ATCOLLABO<br /> <br>
+                Hotline: 036 - 233 - 7288 <br /> <br> Email: info@atcollabo.com
               </p>
             </div>
             <ul class="contact-social">
@@ -843,9 +842,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 // Create the template string with dynamic values
                 const template = `
-              <a href="noti.html?id=${news.id}" title="" class="clients__slide">
-                  <img src="${imgObjectUrl}" style="width:100%; height:350px"/>
-              </a>`;
+                
+                  <a href="noti.html?id=${news.id}" title="" class="clients__slide">
+                  <img src="${imgObjectUrl}" style="width:100%; height:auto; margin-bottom:1.5rem;"/> 
+                  <h5  style="font-family: SVN-Gilroy; font-size: 22px; font-weight: 700; line-height: 32px; letter-spacing: 0em; text-align: left; color:#205D86;"> ${news.title}  </h5>
+              </a>
+              
+             
+              `;
 
                 // Convert the template string to a DOM element
                 const templateElement = document
