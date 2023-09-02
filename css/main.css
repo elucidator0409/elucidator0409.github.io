@@ -2178,7 +2178,7 @@ html.cl-loaded .home-content__main {
 
 @media only screen and (max-width: 400px) {
     .s-home {
-        background-image: url(../images/banner-section1-mobile.png);
+        background-image: url(../images/mobileBanner.svg);
         /* min-height: 630px; */
         width: 100%;
         background-size: cover;
@@ -2202,7 +2202,7 @@ html.cl-loaded .home-content__main {
 }
 @media only screen and (max-width: 576px) {
     .s-home {
-        background-image: url(../images/banner-section1-mobile.png);
+        background-image: url(../images/mobileBanner.svg);
         /* min-height: 630px; */
         width: 100%;
         background-size: cover;
