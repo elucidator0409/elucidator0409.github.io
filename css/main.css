@@ -1372,7 +1372,7 @@ input::-moz-focus-inner {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #959595;
+    background: #ffffff;
     border: none;
     line-height: 10px;
     padding: 0;
@@ -1390,7 +1390,7 @@ input::-moz-focus-inner {
 
 .slick-slider .slick-dots li.slick-active button,
 .slick-slider .slick-dots li:hover button {
-    background: #39b54a;
+    background: #205D86;
 }
 
 /* ===================================================================
