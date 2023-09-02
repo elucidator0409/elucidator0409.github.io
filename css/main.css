@@ -2888,7 +2888,7 @@ html.cl-loaded .home-content__main {
 .clients__slide:hover,
 .clients__slide:focus {
     opacity: 1;
-    color: red;
+    color: transparent;
 }
 
 /* ------------------------------------------------------------------- 
