@@ -1406,12 +1406,19 @@ text-align: center;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-
+@media screen and (max-width: 600px) {
+    .header-logo a {
+        display: none;
+        width: 63px;
+        height: 85px;
+        margin: 0;
+    }
+}
 /* ------------------------------------------------------------------- 
  * ## main navigation 
  * ------------------------------------------------------------------- */
 .header-nav {
-    background: #0c0c0c;
+    background: #0a4e80;
     color: rgba(255, 255, 255, 0.25);
     font-family: "Exo", sans-serif;
     font-size: 1.3rem;
@@ -1483,7 +1490,7 @@ text-align: center;
 
 .header-nav__list a,
 .header-nav__list a:visited {
-    color: #ffffff;
+    color: #66fbee;
 }
 
 .header-nav__social {
@@ -1517,7 +1524,7 @@ text-align: center;
     height: 30px;
     width: 30px;
     border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #0a4e80;
     position: absolute;
     top: 36px;
     right: 30px;
@@ -1533,7 +1540,7 @@ text-align: center;
     display: block;
     height: 2px;
     width: 12px;
-    background-color: #ffffff;
+    background-color: #ffa17a;
     position: absolute;
     top: 50%;
     left: 9px;
@@ -1589,7 +1596,7 @@ text-align: center;
     font-family: "montserrat-medium", sans-serif;
     font-size: 1.3rem;
     text-transform: uppercase;
-    letter-spacing: .3rem;
+    letter-spacing: 0.3rem;
     color: #39b54a;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
@@ -1597,7 +1604,7 @@ text-align: center;
 
 .header-menu-toggle.opaque {
     background-color: #000000;
-    border: 1px solid #66FBEE;
+    border: 1px solid #66fbee;
 }
 
 .header-menu-toggle.opaque .header-menu-text {
@@ -1666,14 +1673,25 @@ text-align: center;
         height: 90px;
     }
     .header-logo {
-        left: 30px;
+        left: 0px;
     }
     .header-menu-toggle {
-        right: 25px;
+        /* right for display menu */
+        right: 0px;
+        background-color: black;
+        position: absolute;
     }
 }
 
 @media only screen and (max-width: 400px) {
+    .header-menu-text {
+        display: none;
+    }
+    .header-logo {
+        display: none;
+    }
+}
+@media only screen and (max-width: 576px) {
     .header-menu-text {
         display: none;
     }
@@ -1683,16 +1701,20 @@ text-align: center;
  * # home 
  *
  * ------------------------------------------------------------------- */
-.s-home {
+ .s-home {
     width: 100%;
-    height: 100%;
-    min-height: 786px;
+    height: auto;
+
     /* background-color: transparent; */
     /* background-color: transparent; */
     position: relative;
-    display: table;
-    background-image: "about-us.png";
-    background-image: "about-us.png";
+    display: flex;
+    background-image: url(../images/bg-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* padding-bottom: 10rem; */
+    box-sizing: border-box;
 }
 
 .s-home .shadow-overlay {
@@ -1722,13 +1744,11 @@ text-align: center;
  * ## home content
  * ------------------------------------------------------------------- */
 .home-content {
-    display: flex;
-    flex-direction: column;
+    display: table-cell;
     width: 100%;
     height: 100%;
-    justify-content: center;
     vertical-align: middle;
-    padding-bottom: 12rem;
+    /* padding-bottom: 15.6rem; */
     position: relative;
     overflow: hidden;
 }
@@ -1758,33 +1778,31 @@ text-align: center;
     position: relative;
 }
 
-.home-content-layout{
-    margin-top: 60rem;
-}
-
-
 .home-content__buttons {
-    padding-top: 10rem;
+    padding-top: 42rem;
     text-align: left;
     display: flex;
     margin-left: 20rem;
 }
+@media screen and (max-width: 576px) {
+    .home-content__buttons {
+        display: none;
+    }
+}
 
 .home-content__buttons .btn {
-    display: flex;
-    width: fit-content;
-    border-color: #ffffff;
+    /* display: flex; */
+    width: 215px;
     color: #ffffff;
-    border: 7px solid #ffffff;
-    margin: 1.5rem 1.5rem 0 0;
+    margin: 1.5rem 1.5rem 2.5rem 0;
     letter-spacing: 0.25rem;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     /* text-align: left; */
+
     align-items: center;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-    border-radius: 10px;
+
+    border-radius: 15px;
 }
 
 .home-content__buttons .btn:last-child {
@@ -1794,7 +1812,7 @@ text-align: center;
 .home-content__buttons .btn:hover,
 .home-content__buttons .btn:focus {
     background: #ffffff !important;
-    color: #000000;
+    color: #0a4e80;
 }
 
 .home-content__scroll {
@@ -2044,12 +2062,27 @@ html.cl-loaded .home-content__main {
         max-width: 550px;
     }
 }
-
+@media only screen and (max-width: 500px) {
+    .home-content__buttons {
+        display: none;
+        padding-top: 2.2rem;
+        /* margin: initial; */
+        display: flex;
+        margin-left: 0;
+        flex-direction: column;
+    }
+    .home-content__buttons .btn {
+        display: none;
+        width: 60%;
+        margin: 1.5rem 0 0 0;
+    }
+}
 @media only screen and (max-width: 700px) {
     .home-content__main {
         max-width: 490px;
     }
     .home-content__buttons {
+        display: none;
         padding-top: 1.2rem;
         text-align: center;
     }
@@ -2091,13 +2124,12 @@ html.cl-loaded .home-content__main {
     }
     .home-content__line {
         height: 7.2rem;
+        display: none;
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .s-home {
-        min-height: 642px;
-    }
+    
     .home-content h1 {
         font-size: 3.5rem;
     }
@@ -2107,14 +2139,6 @@ html.cl-loaded .home-content__main {
         padding-top: 15rem;
         padding-right: 25px;
         width: 85%;
-    }
-    .home-content__buttons {
-        padding-top: 1.2rem;
-        margin: 0 auto;
-    }
-    .home-content__buttons .btn {
-        width: auto;
-        margin: 1.5rem 0 0 0;
     }
     .home-social {
         display: none;
@@ -2129,7 +2153,12 @@ html.cl-loaded .home-content__main {
 
 @media only screen and (max-width: 400px) {
     .s-home {
-        min-height: 630px;
+        background-image: url(../images/mobileBanner.svg);
+        /* min-height: 630px; */
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        min-height: 26vh !important;
     }
     .home-content h1 {
         font-size: 3.2rem;
@@ -2137,6 +2166,23 @@ html.cl-loaded .home-content__main {
     .home-content__main {
         padding-top: 16.2rem;
         width: auto;
+        display: none;
+    }
+    .home-content__scroll {
+        display: none;
+    }
+    .home-content__line {
+        display: none;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .s-home {
+        background-image: url(../images/mobileBanner.svg);
+        /* min-height: 630px; */
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        min-height: 23vh;
     }
 }
 
@@ -2686,14 +2732,28 @@ html.cl-loaded .home-content__main {
     position: relative;
 }
 
+#newsContent{
+    color: #000000;
+    font-size: 25px; 
+    font-weight: 300;
+    line-height: normal;
+    text-align: center; 
+    padding:7rem 3.5rem;
+}
+
 /* ------------------------------------------------------------------- 
  * ## slider
  * ------------------------------------------------------------------- */
 .clients-outer {
+    width: 100%;
     margin-top: 3.6rem;
     padding-bottom: 9rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position: relative;
+
 }
 
 .clients__slide {
@@ -2869,6 +2929,24 @@ html.cl-loaded .home-content__main {
     .clients-testimonials .testimonials p {
         font-size: 2.2rem;
     }
+    #newsContent {
+        width: 75%;
+        padding: 0;
+        font-size: 5px;
+    }
+
+    #newsContent h2{
+        font-size:15px;
+    }
+    #newsContent span{
+        width:100% !important;
+        font-size:15px;
+    }
+
+    #newsContent img{
+        width:75% !important;
+        height: auto !important;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -2888,11 +2966,17 @@ html.cl-loaded .home-content__main {
     .clients-testimonials .testimonials .slick-next {
         right: 0;
     }
+
+    #newsContent {
+        width: 75%;
+        padding: 0;
+
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .s-clients {
-        padding-top: 12rem;
+        padding-top: 3rem;
     }
     .clients-testimonials::before {
         width: 250px;
@@ -2908,6 +2992,25 @@ html.cl-loaded .home-content__main {
 @media only screen and (max-width: 400px) {
     .clients-testimonials .testimonials p {
         font-size: 1.9rem;
+    }
+    .clients-outer {
+        width: 100%;
+        margin-top: 3.6rem;
+        padding-bottom: 9rem;
+        text-align: center;
+        position: relative;
+    
+    }
+
+    #newsContent{
+        max-width: 100%;
+        height:auto;
+        color: #000000;
+    font-size: 4px; 
+    font-weight: 300;
+    line-height: normal;
+    text-align: center; 
+    padding:0;
     }
 }
 /* ===================================================================

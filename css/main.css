@@ -2120,10 +2120,10 @@ html.cl-loaded .home-content__main {
         right: 4rem;
     }
     .home-content__scroll {
-        right: 7.5rem;
+        display:none;
     }
     .home-content__line {
-        right: 5.5rem;
+        display:none;
     }
 }
 
@@ -2184,6 +2184,7 @@ html.cl-loaded .home-content__main {
         background-size: cover;
         display: flex;
         min-height: 26vh !important;
+        padding-bottom: 10rem;
     }
     .home-content h1 {
         font-size: 3.2rem;
@@ -2208,6 +2209,8 @@ html.cl-loaded .home-content__main {
         background-size: cover;
         display: flex;
         min-height: 23vh;
+        padding-bottom: 10rem;
+
     }
 }
 /* ===================================================================
@@ -2361,7 +2364,7 @@ html.cl-loaded .home-content__main {
         margin: 1.5rem 0;
     }
     .stats__col:nth-child(n) {
-        border: none;
+        /* border: none; */
     }
     .stats__col:nth-child(2n + 1) {
         border-right: 1px solid rgba(255, 255, 255, 0.25);
@@ -2404,8 +2407,8 @@ html.cl-loaded .home-content__main {
     }
     .stats__col {
         margin: 0;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 0rem;
         position: relative;
     }
     .stats__col::after {
@@ -2423,7 +2426,7 @@ html.cl-loaded .home-content__main {
         display: none;
     }
     .stats__col:nth-child(n) {
-        border: none;
+        /* border: none; */
     }
     .about__line {
         height: 7.2rem;
@@ -4119,7 +4122,7 @@ footer .row {
 /* Cho màn hình trung bình (tablet) */
 @media (min-width: 768px) and (max-width: 1023px) {
     .register-bar {
-        width: 50%; /* Chiếm 50% chiều rộng */
+        width: 75%; /* Chiếm 50% chiều rộng */
         height: auto; /* Tùy chỉnh chiều cao tự động */
         flex-direction: row; /* Hiển thị ngang */
         padding: 15px; /* Tùy chỉnh khoảng cách */
@@ -4130,7 +4133,7 @@ footer .row {
 /* Cho màn hình lớn (desktop) */
 @media (min-width: 1024px) {
     .register-bar {
-        width: 24.5%;
+        width: 55.5%;
         height: 106px;
         flex-direction: column;
         padding: 0;
