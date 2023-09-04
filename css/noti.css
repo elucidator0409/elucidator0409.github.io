@@ -869,7 +869,7 @@ button.full-width {
 
 .btn--stroke,
 button.btn--stroke {
-    background: transparent !important;
+    background: #0a4e80 !important;
     border: 0.2rem solid #39b54a;
     color: #39b54a;
 }
