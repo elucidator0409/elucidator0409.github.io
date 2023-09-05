@@ -1,2 +1,2 @@
 // globalConfig.js
-var API_DOMAIN = 'http://hackathon.atcollabo.com:8080'; 
+var API_DOMAIN = 'https://hackathon.atcollabo.com:8080'; 
