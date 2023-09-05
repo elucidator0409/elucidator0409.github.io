@@ -1183,7 +1183,7 @@ input::-moz-focus-inner {
 
 .display-3 {
     font-family: "SVN-Gilroy", sans-serif;
-    font-size: 40px;
+    font-size: 30px !important;
     font-weight: 700 !important;
     line-height: 73px;
     letter-spacing: 0em;
@@ -1618,7 +1618,7 @@ input::-moz-focus-inner {
     position: fixed;
     right: 38px;
     top: 24px;
-    height: 45px;
+    height: 42px;
     width: 43px;
     line-height: 42px;
     font-family: "montserrat-medium", sans-serif;
@@ -1636,7 +1636,7 @@ input::-moz-focus-inner {
 }
 
 .header-menu-toggle.opaque .header-menu-text {
-    background-color: #000000;
+   
 }
 
 .header-menu-toggle:hover,
@@ -1652,7 +1652,7 @@ input::-moz-focus-inner {
     left: -70px;
     background-color: #0a4e80;
     border-radius: 4px;
-    width: 70px;
+    width: 115px;
     color: white;
     padding-left: 12px;
     font-family: "SVN-Gilroy", sans-serif;
@@ -2222,7 +2222,7 @@ html.cl-loaded .home-content__main {
  * ------------------------------------------------------------------- */
 .s-about {
     padding-top: 3.2rem;
-    padding-bottom: 24rem;
+    padding-bottom: 6rem;
     width: 100%;
     height: fit-content;
     color: #010507;
@@ -2230,7 +2230,8 @@ html.cl-loaded .home-content__main {
     position: relative;
     background-image: url(../images/about-us.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-color: #0E4D80;
 }
 @media screen and (max-width: 768px) {
     .s-about {
@@ -3158,15 +3159,15 @@ html.cl-loaded .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-contact {
-    background-color: #151515;
+    background-color: #0E4D80;
     background-image: url("../images/Register1.png");
     background-repeat: no-repeat;
     background-position: bottom;
     padding-top: 15rem;
-    padding-bottom: 12rem;
+    padding-bottom: 3rem;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
-    background-size: cover;
+    background-size: contain;
 }
 
 .s-contact .overlay {
@@ -3334,8 +3335,8 @@ html.cl-loaded .home-content__main {
     background-color: #fff;
     border-radius: 6px;
     position: absolute;
-    top: -550%;
-    left: 50%;
+    top: -350%;
+    left: 75%;
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 0 30px 30px;
@@ -3345,52 +3346,15 @@ html.cl-loaded .home-content__main {
         transform 0.4s,
         top 0.4s;
 }
-
-.contact-primary #contactForm .popup #reviewData p{
-    color: black;
-    letter-spacing: 0em;
-    text-align: left;
-    font-size: 20px;
-    font-family: "SVN-Gilroy", sans-serif;
-    font-weight: 400;
-    line-height: 31px;
-}
-
-.contact-primary #contactForm .popupQR {
-    width: 40rem;
-    background-color: #fff;
-    border-radius: 6px;
-    position: absolute;
-    top: -450%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 0 30px 30px;
-    color: #333;
-    visibility: hidden;
-    transition:
-        transform 0.4s,
-        top 0.4s;
-}
-
-.contact-primary #contactForm .popupQR #momo-logo{
-    width: 30%;
-}
-
-
 @media only screen and (max-width: 576px) {
     .contact-primary #contactForm .popup {
         color: green;
+        background-color: darkcyan;
         /* top: 0%; */
         left: 50%;
         /* top: 0; */
-        width: 40rem;
-    }
-
-    .contact-primary #contactForm .popupQR {
-        width: 33rem;
-        top: -600%;
-        
+        width: 30rem;
+        bottom: 50%;
     }
 }
 .contact-primary #contactForm .popup img {
@@ -3920,7 +3884,7 @@ footer .row {
     position: relative;
     padding-right: 50px;
     padding-left: 50px;
-
+    border-bottom: 3px solid #0a4e80;
     list-style: none;
     text-align: left;
 }
@@ -4056,12 +4020,14 @@ footer .row {
     top: 0;
     font-family: "SVN-Gilroy", sans-serif;
     color: #0a4e80;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 44px;
     letter-spacing: 0em;
     text-align: left;
     text-transform: uppercase;
+    margin-bottom: 4px;
+    margin-top: -15px;
 }
 
 .mb-3-content {
@@ -4151,10 +4117,8 @@ footer .row {
 .award-layout {
     display: flex;
     width: fit-content;
-
     gap: 36px;
     padding-top: 1rem;
-
 }
 .award-layout1 {
     display: flex;
@@ -4226,7 +4190,7 @@ footer .row {
     }
 }
 p {
-    color: black;
+    color: white;
     letter-spacing: 0em;
     text-align: left;
     font-size: 20px;
@@ -4333,10 +4297,8 @@ p {
     margin: 0 auto;
 }
 .img-award1 {
-
     width: 100px;
     height: 130px;
-
     align-self: flex-end;
     
         margin-bottom: 50px; /* Tạo khoảng cách dưới hình ảnh img-award1 */
