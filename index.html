@@ -155,6 +155,7 @@
             </div>
           </div>
         </div>
+
       </div>
       <ul class="home-social">
         <li>
@@ -219,7 +220,7 @@
         </div>
         <div class="col-full">
           <h3 class="subhead subhead--dark">About us</h3>
-          <h1 class="display-2">Giới Thiệu</h1>
+          <h1 class="display-2">Giới Thiệu:</h1>
           <img
             class="line_bar"
             style="width: fit-content; height: 20px"
@@ -276,6 +277,7 @@
                 <h5>Happy Clients</h5>
             </div>
         </div> -->
+      <div class="about__line"></div>
     </section>
     <section
       id="services"
@@ -348,9 +350,11 @@
 
       <div class="col-full"><h4 class="display-3">Phí Tham Dự</h4></div>
       <div class="register-bar">
+
         <img class="register-bar" src="/images/register-bar.png" alt="" />
         <p class="registration-fee">
           200.000 VND<span class="participant-type">/ Thí sinh</span>
+
         </p>
       </div>
     </section>
@@ -451,29 +455,104 @@
           />
         </div>
       </div>
-      <div class="row contact-content" data-aos="fade-up">
-        <div class="contact-primary">
-          <form
-            name="contactForm"
-            id="contactForm"
-            method="post"
-            action="index.html"
-          >
-            <fieldset>
-              <div class="form-field">
-                <p>Họ tên</p>
-                <input
-                  name="contactName"
-                  type="text"
-                  id="contactName"
-                  placeholder="Your Name"
-                  minlength="2"
-                  required
-                  aria-required="true"
-                  class="full-width"
-                  pattern="[A-Za-zÀ-ÿ\s\p{L}]+"
-                  title="Please enter a valid name (letters and spaces only)"
-                />
+
+    </div>
+    <div class="row contact-content" data-aos="fade-up">
+      <div class="contact-primary">
+        <form
+          name="contactForm"
+          id="contactForm"
+          method="post"
+          action="index.html"
+        >
+          <fieldset>
+            <div class="form-field">
+              <p>Họ tên</p>
+              <input
+                name="contactName"
+                type="text"
+                id="contactName"
+                placeholder="Your Name"
+                minlength="2"
+                required
+                aria-required="true"
+                class="full-width"
+                pattern="[A-Za-zÀ-ÿ\s\p{L}]+"
+                title="Please enter a valid name (letters and spaces only)"
+              />
+            </div>
+            <div class="form-field">
+              <p>Email</p>
+              <input
+                name="contactEmail"
+                type="email"
+                id="contactEmail"
+                placeholder="Your Email"
+                required
+                aria-required="true"
+                class="full-width"
+              />
+            </div>
+            <div class="form-field">
+              <p>Số điện thoại</p>
+              <input
+                name="contactPhone"
+                type="tel"
+                id="contactPhone"
+                placeholder="Your Phone Number"
+                minlength="10"
+                value=""
+                required
+                aria-required="true"
+                class="full-width"
+                pattern="[0-9]+(\s?[0-9]+)*"
+                title="Please enter a valid phone number"
+              />
+            </div>
+            <div class="form-field">
+              <p>Nghề nghiệp</p>
+              <input
+                name="contactSubject"
+                type="text"
+                id="contactSubject"
+                placeholder="Subject"
+                required
+                aria-required="true"
+                class="full-width"
+              />
+            </div>
+            <div class="form-field">
+              <p>Tuổi</p>
+              <input
+                name="contactAge"
+                type="number"
+                id="contactAge"
+                placeholder="Your Age"
+                required
+                aria-required="true"
+                class="full-width"
+                min="1"
+              />
+            </div>
+            <div class="form-field">
+              <button type="button" id="submitButton" class="full-width btn--primary">
+                <p  style="margin-bottom: unset !important;" >Đăng ký</p>
+              </button>
+              <div class="popup" id="popup">
+                <img src="./images/tick.png" />
+                <p>Xin vui lòng kiểm tra thông tin cá nhân:</p>
+                <div id="reviewData"></div>
+                <button type="button" id="backToForm">Trở về</button>
+                <button type="button" id="reviewPopup">Thanh toán</button>
+              </div>
+
+              <div class="popupQR" id="popupQR">
+                <p><br>Thanh toán lệ phí tham dự tại đây trước khi đồng ý đăng kí</p>
+                <img id="momo-logo" src="./images/momo_logo.jpg" />
+                <img src="./images/QR.jpg" />
+                <button type="button" id="backToReview">Trở về</button>
+                <button type="submit" id="confirmPopup">Xác nhận</button>
+
               </div>
               <div class="form-field">
                 <p>Email</p>
@@ -716,6 +795,61 @@ document.addEventListener("DOMContentLoaded", function () {
     </script> -->
 
     <script>
+
+              // Get references to the form and pop-up elements
+        const contactForm = document.getElementById('contactForm');
+        const popup = document.getElementById('popup');
+        const reviewData = document.getElementById('reviewData');
+        const submitButton = document.getElementById('submitButton');
+        const confirmButton = document.getElementById('confirmButton');
+
+        // Add an event listener to the form's submit button
+        submitButton.addEventListener('click', () => {
+          // Gather and display user-entered data for review
+          const name = document.getElementById('contactName').value;
+          const email = document.getElementById('contactEmail').value;
+          const phone = document.getElementById('contactPhone').value;
+          const subject = document.getElementById('contactSubject').value;
+          const age = document.getElementById('contactAge').value;
+
+          const reviewHtml = `
+            <p><strong>Họ tên:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Số điện thoại:</strong> ${phone}</p>
+            <p><strong>Nghề nghiệp:</strong> ${subject}</p>
+            <p><strong>Tuổi:</strong> ${age}</p>
+          `;
+
+          reviewData.innerHTML = reviewHtml;
+
+          // Show the pop-up
+          popup.style.visibility = "visible";
+          submitButton.style.visibility = "hidden"
+
+          // Show the popup
+          const confirmPopup = document.getElementById("popupQR");
+          const backToFormButton = document.getElementById("backToForm");
+          const backToReviewButton = document.getElementById("backToReview");
+          
+          // Close the popup when clicking the "x" button
+          const reviewButton = document.getElementById("reviewPopup");
+          reviewButton.addEventListener("click", function () {
+            popup.style.visibility = "hidden";
+            confirmPopup.style.visibility = "visible";
+          });
+          backToFormButton.addEventListener("click", function () {
+            popup.style.visibility = "hidden";
+            submitButton.style.visibility = "visible"
+          });
+          backToReviewButton.addEventListener("click", function () {
+            confirmPopup.style.visibility = "hidden";            
+            popup.style.visibility = "visible";
+          });
+
+});
+    </script>
+
+    <script>
       document
         .getElementById("contactForm")
         .addEventListener("submit", function (event) {
@@ -738,24 +872,31 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             body: JSON.stringify(requestBody),
           })
-            .then((response) => response.json())
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error("Network response was not ok");
+              }
+              return response.json();
+            })
             .then((data) => {
               console.log("Data saved:", data);
 
-              // Show the popup
-              const popup = document.getElementById("popup");
-              popup.style.visibility = "visible";
+                
+              const confirmPopup = document.getElementById("popupQR");
+              const submitButton = document.getElementById('submitButton');
+              
 
-              // Close the popup when clicking the "x" button
-              const closePopupButton = document.getElementById("closePopup");
-              closePopupButton.addEventListener("click", function () {
-                popup.style.visibility = "hidden";
-                document.getElementById("contactForm").reset();
-              });
+              confirmPopup.style.visibility = "hidden";
+              document.getElementById("contactForm").reset();
+              submitButton.style.visibility = "visible"
+
+
+             
             })
             .catch((error) => {
               console.error(error);
-              // Handle error, show an error message, etc.
+              alert("An error occurred while saving your data. Please try again.");
+
             });
         });
     </script>
@@ -766,9 +907,6 @@ document.addEventListener("DOMContentLoaded", function () {
       function loadJS(FILE_URL, async = false) {
         let scriptEle = document.createElement("script");
 
-        // scriptEle.setAttribute("src", FILE_URL);
-        // scriptEle.setAttribute("type", "text/javascript");
-        // scriptEle.setAttribute("async", '');
         scriptEle.src = FILE_URL;
         scriptEle.async = false;
 
