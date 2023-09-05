@@ -1194,7 +1194,7 @@ input::-moz-focus-inner {
 }
 @media screen and (max-width:576px) {
     .display-3 {
-        font-size: 30px !important;
+        font-size: 22px !important;
     }
 }
 
@@ -1445,6 +1445,7 @@ input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header-nav {
     background: #0a4e80;
+    border: 2px solid #66FBEE;
     color: rgba(255, 255, 255, 0.25);
     font-family: "Exo", sans-serif;
     font-size: 1.3rem;
@@ -1517,6 +1518,7 @@ input::-moz-focus-inner {
 .header-nav__list a,
 .header-nav__list a:visited {
     color: #66fbee;
+    font-family: "SVN-Gilroy", sans-serif;
 }
 
 .header-nav__social {
@@ -1653,6 +1655,7 @@ input::-moz-focus-inner {
     width: 70px;
     color: white;
     padding-left: 12px;
+    font-family: "SVN-Gilroy", sans-serif;
 }
 
 .header-menu-icon {
@@ -2223,6 +2226,7 @@ html.cl-loaded .home-content__main {
     width: 100%;
     height: fit-content;
     color: #010507;
+    background-position: bottom;
     position: relative;
     background-image: url(../images/about-us.png);
     background-repeat: no-repeat;
@@ -2256,7 +2260,7 @@ html.cl-loaded .home-content__main {
     line-height: 34px;
     letter-spacing: 0em;
     text-align: left;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 .about-content2 {
     font-family: "SVN-Gilroy", sans-serif;
@@ -2265,6 +2269,10 @@ html.cl-loaded .home-content__main {
     line-height: 31px;
     letter-spacing: 0em;
     text-align: justify;
+    margin-bottom: 5rem;
+}
+.about-content3 {
+    margin-bottom: 2rem;
 }
 @media screen and (max-width: 576px) {
     .about-content {
@@ -2278,11 +2286,12 @@ html.cl-loaded .home-content__main {
     }
     .about-content3 {
         font-family: "SVN-Gilroy", sans-serif;
-        font-size: 14px;
+        font-size: 11px;
         font-weight: 300;
         line-height: 31px;
         letter-spacing: -0.5px;
         text-align: justify;
+        margin-bottom: 2rem;
     }
     .about-content2 {
         font-family: "SVN-Gilroy", sans-serif;
@@ -2316,8 +2325,9 @@ html.cl-loaded .home-content__main {
 
 .stats__count {
     font-family: "SVN-Gilroy", sans-serif;
-    font-size: 8.4rem;
-    line-height: 1;
+    font-size: 7rem;
+    font-weight: 700;
+    line-height: normal;
     color: #ffffff;
     position: relative;
     /* overflow: hidden; */
@@ -2464,6 +2474,24 @@ html.cl-loaded .home-content__main {
     padding-bottom: 13.2rem;
     color: #757575;
     position: relative;
+}
+.registration-fee {
+    font-weight: 700 !important; 
+    font-size: 21px; 
+    position: absolute;
+}
+@media screen and (max-width:576px){
+    .registration-fee{
+        font-size: 13px;
+        margin-bottom: unset;
+    }
+}
+.participate-type {
+    font-family: 'SVN-Gilroy';
+              font-weight: 500;
+              font-size: 26px;
+              line-height: 24.15px;
+              text-align: center;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3133,7 +3161,7 @@ html.cl-loaded .home-content__main {
     background-color: #151515;
     background-image: url("../images/Register1.png");
     background-repeat: no-repeat;
-    background-position: center, center;
+    background-position: bottom;
     padding-top: 15rem;
     padding-bottom: 12rem;
     color: rgba(255, 255, 255, 0.5);
@@ -3578,7 +3606,7 @@ html.cl-loaded .home-content__main {
 
 @media only screen and (max-width: 600px) {
     .s-contact {
-        padding-top: 12rem;
+        padding-top: 6rem;
         padding-bottom: 0;
     }
     .contact__line {
@@ -4072,14 +4100,29 @@ footer .row {
     /* align-self: flex-end; */
     margin-bottom: 0;
 }
+.text-award1{
+    align-items: center;
+    display: flex;
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #67a7a3;
+    width: 58%;
+    margin-top: -10px;
+    /* align-self: flex-end; */
+    margin-bottom: 0;
+}
 @media screen and (max-width: 576px) {
     .text-award {
         text-align: left;
-        width: 100%;
+        width: 93%;
         /* height: 80px; */
         align-items: start;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 14px;
     }
     .img-award1 {
         align-self: flex-start !important;
@@ -4108,20 +4151,25 @@ footer .row {
 .award-layout {
     display: flex;
     width: fit-content;
-    gap: 20px;
-    padding-top: 50px;
+
+    gap: 36px;
+    padding-top: 1rem;
+
 }
 .award-layout1 {
     display: flex;
-    padding: 10px;
+    /* padding: 10px; */
     width: fit-content;
-    gap: 20px;
+    gap: 30px;
 }
 @media screen and (max-width: 576px) {
     .award-layout {
         width: 100%;
         display: flex;
         justify-content: space-between;
+    }
+    .award-layout1{
+        margin-bottom: 2rem;
     }
 }
 
@@ -4151,7 +4199,7 @@ footer .row {
    
        
 .register-bar {
-    width: 100%;
+    width: 80%;
     /* height: 13vh; */
     }
 }
@@ -4195,13 +4243,14 @@ p {
     /* display: flex; */
     width: 100%;
     /* height: 175px; */
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
     align-items: center;
 }
 @media screen and (max-width: 576px) {
     .award-row1 {
         display: flex;
         flex-direction: column;
+        margin-bottom: 3rem;
     }
 }
 
@@ -4284,17 +4333,21 @@ p {
     margin: 0 auto;
 }
 .img-award1 {
-    width: 120px;
-    height: 180px;
+
+    width: 100px;
+    height: 130px;
+
     align-self: flex-end;
+    
+        margin-bottom: 50px; /* Tạo khoảng cách dưới hình ảnh img-award1 */
 }
 
 @media only screen and (max-width: 576px) {
     .img-award1 {
         align-items: flex-start;
         /* margin-top: -20px; */
-        width: 130px;
-        height: 109px;
+        width: 98px;
+        height: 95px;
     }
 }
 .img-award2 {
@@ -4323,7 +4376,7 @@ p {
 .btn-header {
     display: flex;
     justify-content: center;
-
+    font-family: "SVN-Gilroy", sans-serif;
     font-size: 18px;
     align-content: center;
     align-items: center;
@@ -4360,3 +4413,13 @@ p {
         padding-top: unset !important;
     }
 }
+#list-member {
+    padding: 0 25rem !important;
+}
+@media (max-width: 576px) {
+    #list-member {
+        /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
+        padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
+    }
+}
+
