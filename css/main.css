@@ -1194,7 +1194,7 @@ input::-moz-focus-inner {
 }
 @media screen and (max-width:576px) {
     .display-3 {
-        font-size: 30px !important;
+        font-size: 22px !important;
     }
 }
 
@@ -2282,7 +2282,7 @@ html.cl-loaded .home-content__main {
         font-size: 14px;
         font-weight: 300;
         line-height: 31px;
-        letter-spacing: -0.5px;
+        letter-spacing: -0.9px;
         text-align: justify;
     }
     .about-content2 {
@@ -4045,7 +4045,7 @@ footer .row {
         /* height: 80px; */
         align-items: start;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 13px;
     }
     .img-award1 {
         align-self: flex-start !important;
@@ -4081,7 +4081,7 @@ footer .row {
     display: flex;
     padding: 10px;
     width: fit-content;
-    gap: 20px;
+    gap: 30px;
 }
 @media screen and (max-width: 576px) {
     .award-layout {
@@ -4117,7 +4117,7 @@ footer .row {
    
        
 .register-bar {
-    width: 100%;
+    width: 80%;
     /* height: 13vh; */
     }
 }
