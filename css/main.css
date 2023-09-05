@@ -2223,6 +2223,7 @@ html.cl-loaded .home-content__main {
     width: 100%;
     height: fit-content;
     color: #010507;
+    background-position: bottom;
     position: relative;
     background-image: url(../images/about-us.png);
     background-repeat: no-repeat;
@@ -2257,7 +2258,7 @@ html.cl-loaded .home-content__main {
     line-height: 34px;
     letter-spacing: 0em;
     text-align: left;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 .about-content2 {
     font-family: "SVN-Gilroy", sans-serif;
@@ -2266,6 +2267,10 @@ html.cl-loaded .home-content__main {
     line-height: 31px;
     letter-spacing: 0em;
     text-align: justify;
+    margin-bottom: 5rem;
+}
+.about-content3 {
+    margin-bottom: 2rem;
 }
 @media screen and (max-width: 576px) {
     .about-content {
@@ -2284,6 +2289,7 @@ html.cl-loaded .home-content__main {
         line-height: 31px;
         letter-spacing: -0.9px;
         text-align: justify;
+        margin-bottom: 2rem;
     }
     .about-content2 {
         font-family: "SVN-Gilroy", sans-serif;
@@ -2465,6 +2471,24 @@ html.cl-loaded .home-content__main {
     padding-bottom: 13.2rem;
     color: #757575;
     position: relative;
+}
+.registration-fee {
+    font-weight: 700 !important; 
+    font-size: 21px; 
+    position: absolute;
+}
+@media screen and (max-width:576px){
+    .registration-fee{
+        font-size: 13px;
+        margin-bottom: unset;
+    }
+}
+.participate-type {
+    font-family: 'SVN-Gilroy';
+              font-weight: 500;
+              font-size: 26px;
+              line-height: 24.15px;
+              text-align: center;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3134,7 +3158,7 @@ html.cl-loaded .home-content__main {
     background-color: #0E4D80;
     background-image: url("../images/Register1.png");
     background-repeat: no-repeat;
-    background-position: center, center;
+    background-position: bottom;
     padding-top: 15rem;
     padding-bottom: 3rem;
     color: rgba(255, 255, 255, 0.5);
@@ -4075,11 +4099,11 @@ footer .row {
     display: flex;
     width: fit-content;
     gap: 36px;
-    padding-top: 36px;
+    padding-top: 1rem;
 }
 .award-layout1 {
     display: flex;
-    padding: 10px;
+    /* padding: 10px; */
     width: fit-content;
     gap: 30px;
 }
@@ -4161,7 +4185,7 @@ p {
     /* display: flex; */
     width: 100%;
     /* height: 175px; */
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
     align-items: center;
 }
 @media screen and (max-width: 576px) {
@@ -4250,8 +4274,8 @@ p {
     margin: 0 auto;
 }
 .img-award1 {
-    width: 105px;
-    height: 150px;
+    width: 100px;
+    height: 130px;
     align-self: flex-end;
 }
 
@@ -4326,3 +4350,13 @@ p {
         padding-top: unset !important;
     }
 }
+#list-member {
+    padding: 0 25rem !important;
+}
+@media (max-width: 576px) {
+    #list-member {
+        /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
+        padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
+    }
+}
+
