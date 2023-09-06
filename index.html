@@ -277,7 +277,6 @@
                 <h5>Happy Clients</h5>
             </div>
         </div> -->
-      <div class="about__line"></div>
     </section>
     <section
       id="services"
@@ -542,24 +541,26 @@
                 <img src="./images/tick.png" />
                 <p style="color: black !important">Xin vui lòng kiểm tra thông tin cá nhân:</p>
                 <div id="reviewData"></div>
-                <button type="button" id="backToForm">Trở về</button>
-                <button type="submit" id="reviewPopup">Thanh toán</button>
+                <button class="button-payment" type="button" id="backToForm">Trở về</button>
+                <button class="button-payment" type="submit" id="reviewPopup">Thanh toán</button>
               </div>
 
               <div class="popupQR" id="popupQR">
-                <p style="color: black !important"><br>Thanh toán lệ phí tham dự tại đây trước khi đồng ý đăng kí</p>
-                <img src="./images/QRbank.png" />
+                <p style="color: black !important; font-family: 'SVN-Gilroy', sans-serif; font-size: 16px;"><br>Thanh toán lệ phí trước khi "Xác nhận"</p>
                 <p style="color: black !important;font-family: 'SVN-Gilroy', sans-serif; font-size: 14px;"> NỘI DUNG CHUYỂN KHOẢN: <br>
                   Họ & tên người đăng ký _ SDT <br>
                   (Ví dụ: Nguyen Van A _ 012548628) </p>
-                <button type="button" id="backToReview">Trở về</button>
-                <button type="button" id="confirmPopup">Xác nhận</button>
+                <img src="./images/QRbank.png" />
+                <div class="css-button-payment">
+                <button class="button-payment" type="button" id="backToReview">Trở về</button>
+                <button class="button-payment" type="button" id="confirmPopup">Thanh toán</button>
+              </div>
               </div>
 
               <div class="popupSuccess" id="popupSuccess">
                 <h2><br>Thank You!</h2>
                 <p style="color: black !important;text-align: center;">Bạn đã đăng ký thành công !</p>
-                <button type="button" id="successPopup">OK</button>
+                <button class="button-payment" type="button" id="successPopup">OK</button>
               </div>
              </div>
             </fieldset>
