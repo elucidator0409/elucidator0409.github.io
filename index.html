@@ -746,7 +746,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const confirmButton = document.getElementById('confirmButton');
 
         // Add an event listener to the form's submit button
-        submitButton.addEventListener('click', () => {
+        submitButton.addEventListener('click', (event) => {
+          event.preventDefault();
           // Gather and display user-entered data for review
           const name = document.getElementById('contactName').value;
           const email = document.getElementById('contactEmail').value;
