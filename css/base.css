@@ -464,7 +464,7 @@
          margin-right: -15px;
      }
      [class*="col-"] {
-         padding: 0 15px;
+         padding: unset
      }
  }
  
