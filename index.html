@@ -543,7 +543,7 @@
                 <p style="color: black !important">Xin vui lòng kiểm tra thông tin cá nhân:</p>
                 <div id="reviewData"></div>
                 <button type="button" id="backToForm">Trở về</button>
-                <button type="button" id="reviewPopup">Thanh toán</button>
+                <button type="submit" id="reviewPopup">Thanh toán</button>
               </div>
 
               <div class="popupQR" id="popupQR">
@@ -551,7 +551,7 @@
                 <img id="momo-logo" src="./images/momo_logo.jpg" />
                 <img src="./images/QR.jpg" />
                 <button type="button" id="backToReview">Trở về</button>
-                <button type="submit" id="confirmPopup">Xác nhận</button>
+                <button type="button" id="confirmPopup">Xác nhận</button>
               </div>
 
               <div class="popupSuccess" id="popupSuccess">
@@ -776,10 +776,8 @@ document.addEventListener("DOMContentLoaded", function () {
           
           // Close the popup when clicking the "x" button
           const reviewButton = document.getElementById("reviewPopup");
-          reviewButton.addEventListener("click", function () {
-            popup.style.visibility = "hidden";
-            confirmPopup.style.visibility = "visible";
-          });
+          
+          
           backToFormButton.addEventListener("click", function () {
             popup.style.visibility = "hidden";
             submitButton.style.visibility = "visible"
@@ -789,7 +787,7 @@ document.addEventListener("DOMContentLoaded", function () {
             popup.style.visibility = "visible";
           });
 
-});
+    });
     </script>
 
     <script>
@@ -823,20 +821,25 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             .then((data) => {
               console.log("Data saved:", data);
-
                 
               const confirmPopup = document.getElementById("popupQR");
               const successPopup = document.getElementById("popupSuccess");
               const submitButton = document.getElementById('submitButton');
+              const popup = document.getElementById('popup');
+
+              popup.style.visibility = "hidden";
+              confirmPopup.style.visibility = "visible";
+
               
 
-              confirmPopup.style.visibility = "hidden";    
-              successPopup.style.visibility = "visible";    
+              confirmPopup.addEventListener("click", function () {
+                successPopup.style.visibility = "visible";    
+                confirmPopup.style.visibility = "hidden";                
+                document.getElementById("contactForm").reset();
 
-              document.getElementById("contactForm").reset();
-              
-              
-              
+              });
+
+      
               const popupSuccessButton = document.getElementById('successPopup');
               popupSuccessButton.addEventListener("click", function () {
                 successPopup.style.visibility = "hidden";    
