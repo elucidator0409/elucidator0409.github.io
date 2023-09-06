@@ -4082,6 +4082,14 @@ footer .row {
     margin-bottom: 0;
 }
 @media screen and (max-width: 576px) {
+    .text-award1 {
+        text-align: left;
+        width: 93%;
+        /* height: 80px; */
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+    }
     .text-award {
         text-align: left;
         width: 93%;
@@ -4090,9 +4098,7 @@ footer .row {
         font-weight: 500;
         font-size: 14px;
     }
-    .img-award1 {
-        align-self: flex-start !important;
-    }
+   
     .img-award4 {
         align-self: flex-start !important;
     }
@@ -4131,6 +4137,7 @@ footer .row {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 2rem;
     }
     .award-layout1{
         margin-bottom: 2rem;
@@ -4306,10 +4313,11 @@ p {
 
 @media only screen and (max-width: 576px) {
     .img-award1 {
-        align-items: flex-start;
-        /* margin-top: -20px; */
-        width: 98px;
-        height: 95px;
+    align-items: flex-start;
+    /* margin-top: -20px; */
+    width: 98px;
+    height: 100px;
+    margin-bottom: unset;
     }
 }
 .img-award2 {
