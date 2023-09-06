@@ -112,7 +112,7 @@ a:active {
   background-color: inherit;
   text-decoration: none;
 }
-.container .clients-content .button-back a:hover
+.container .button-back a:hover
 {
     color: inherit;
   background-color: inherit;
@@ -1383,7 +1383,7 @@ input::-moz-focus-inner {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: #ffffff;
+    background: #67A7A3;
     border: none;
     line-height: 10px;
     padding: 0;
@@ -4534,7 +4534,8 @@ p {
     }
 }
 #buttonBack {
-    width: 23vh;
+    width: fit-content;
+    min-width: 36vh;
     padding: 9px 41px;
     border-radius: 10px;
     border: 2px solid #66FBEE;
@@ -4547,6 +4548,7 @@ p {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    margin: 0 auto;
 }
 @media screen and (max-width:576px) {
     #buttonBack {

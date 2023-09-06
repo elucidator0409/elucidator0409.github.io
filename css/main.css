@@ -3468,6 +3468,7 @@ html.cl-loaded .home-content__main {
     position: relative;
     text-align: start;
     margin-top: 13rem;
+    text-align: center;
 }
 @media screen and (max-width:576px) {
     .contact-secondary .contact-info {
