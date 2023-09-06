@@ -538,8 +538,8 @@
                 <p style="margin-bottom: unset !important; font-size:21px" >Đăng ký</p>
               </button>
               <div class="popup" id="popup">
-                <img src="./images/tick.png" />
-                <p style="color: black !important">Xin vui lòng kiểm tra thông tin cá nhân:</p>
+                <div class="title-popup"><p style="color: #68AAA5 !important; text-align: center;">Vui lòng kiểm tra thông tin
+                  trước khi thanh toán</p></div>
                 <div id="reviewData"></div>
                 <div class="popup-button-payment">
                 <button class="button-payment" type="button" id="backToForm">Trở về</button>
@@ -548,15 +548,14 @@
               </div>
 
               <div class="popupQR" id="popupQR">
-                <p style="color: black !important; font-family: 'SVN-Gilroy', sans-serif; font-size: 16px;"><br>Thanh toán lệ phí trước khi "Xác nhận"</p>
-                <p style="color: black !important;font-family: 'SVN-Gilroy', sans-serif; font-size: 14px;"> NỘI DUNG CHUYỂN KHOẢN: <br>
+                <p style="color: #0A4E80 !important;font-family: 'SVN-Gilroy', sans-serif; font-size: 14px;"> NỘI DUNG CHUYỂN KHOẢN: <br>
                   Họ & tên người đăng ký _ SDT <br>
                   (Ví dụ: Nguyen Van A _ 012548628) </p>
-                <img src="./images/QRbank.png" />
+                <img src="./images/qrbankblue.png" />
                 <div class="popup-button-payment">
 
                 <button class="button-payment" type="button" id="backToReview">Trở về</button>
-                <button class="button-payment" type="button" id="confirmPopup">Thanh toán</button>
+                <button class="button-payment" type="button" id="confirmPopup">Xác nhận</button>
               </div>
               </div>
 
@@ -686,12 +685,21 @@
         </div>
       </div>
     </div>
+    <!-- Back to top button -->
+<button
+type="button"
+class="btn btn-danger btn-floating btn-lg"
+id="btn-back-to-top"
+>
+<i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+</button>
     <!-- <script data-cfasync="false"
         src="https://preview.colorlib.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/countdown.js"></script>
+    <script src="js/scroll-to-top.js"></script>
 
     <!-- <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"

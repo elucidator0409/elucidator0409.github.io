@@ -136,18 +136,23 @@
    
    
     <section id="clients" class="s-clients-notipage" data-parallax="scroll" >
-        <div class="row section-header" >
+        <div class="section-header" >
             <div class="col-full">
                 <h3 class="subhead"> Noti</h3>
                 <h1 class="display-2">THÔNG BÁO</h1>
+                <img
+            class="line_bar"
+            style="height: 20px"
+            src="images/line1.png"
+            alt=""
+          />
             </div>
         </div>
         
-        <div class=" row clients-outer  about-desc aos-init aos-animate" data-aos="fade-up">
           <div class="container">
 
             <div id="newsDetails" class="clients-content" style="display:flex;flex-direction: column;justify-content: center; align-items: center;">
-                <div class="banner" style="width: 50%;">
+                <div class="banner" >
                     <div>
                     <img id="newsImage" src="" alt="banner-news" style="width: 400; height: 200">
                     </div>
@@ -166,7 +171,7 @@
             
             
           </div>
-        </div>
+     
         <div class="clients-outer" data-aos="fade-up">
 
           <div class="col-full clients-testimonials" data-aos="fade-up">
@@ -343,7 +348,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const template = `
           <a href="noti.html?id=${news.id}" title="" class="clients__slide">
                   <img src="${imgObjectUrl}" style="width:100%; height:auto; margin-bottom:1.5rem;"/> 
-                  <h5  style="font-family: SVN-Gilroy; font-size: 22px; font-weight: 700; line-height: 32px; letter-spacing: 0em; text-align: left; color:#205D86;"> ${news.title}  </h5>
+                  <h5  style="font-family: 'SVN-Gilroy', sans-serif; font-size: 26px; font-weight: 700; line-height: 31px; letter-spacing: 0em; text-align: left; color:#205D86;"> ${news.title}  </h5>
               </a>`;
 
           // Convert the template string to a DOM element
