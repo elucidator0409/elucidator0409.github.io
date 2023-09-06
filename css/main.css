@@ -4138,13 +4138,19 @@ footer .row {
         text-align: left;
         width: 93%;
         /* height: 80px; */
-        align-items: start;
+        align-items: center;
         font-weight: 500;
         font-size: 14px;
     }
-    .img-award1 {
-        align-self: flex-start !important;
+    .text-award1{
+        text-align: left;
+        width: 93%;
+        /* height: 80px; */
+        align-items: end;
+        font-weight: 500;
+        font-size: 15px;
     }
+    
     .img-award4 {
         align-self: flex-start !important;
     }
@@ -4181,8 +4187,9 @@ footer .row {
 @media screen and (max-width: 576px) {
     .award-layout {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
     }
     .award-layout1{
         margin-bottom: 2rem;
@@ -4265,8 +4272,8 @@ p {
 @media screen and (max-width: 576px) {
     .award-row1 {
         display: flex;
-        flex-direction: column;
-        margin-bottom: 3rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
     }
 }
 
@@ -4349,8 +4356,8 @@ p {
     margin: 0 auto;
 }
 .img-award1 {
-    width: 100px;
-    height: 130px;
+    width: 93px;
+    height: 120px;
     align-self: flex-end;
     
         margin-bottom: 50px; /* Tạo khoảng cách dưới hình ảnh img-award1 */
@@ -4360,13 +4367,14 @@ p {
     .img-award1 {
         align-items: flex-start;
         /* margin-top: -20px; */
-        width: 98px;
-        height: 95px;
+        width: 100px;
+        height: 98px;
+        margin-bottom: unset;
     }
 }
 .img-award2 {
-    width: 95px;
-    height: 97px;
+    width: 94px;
+    height: 80px;
     align-self: flex-end;
 }
 .img-award3 {
