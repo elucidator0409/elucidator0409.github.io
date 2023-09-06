@@ -3335,8 +3335,56 @@ html.cl-loaded .home-content__main {
     background-color: #fff;
     border-radius: 6px;
     position: absolute;
-    top: -350%;
-    left: 75%;
+    top: -550%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition:
+        transform 0.4s,
+        top 0.4s;
+}
+
+.contact-primary #contactForm .popup #reviewData p{
+    color: black;
+    letter-spacing: 0em;
+    text-align: left;
+    font-size: 20px;
+    font-family: "SVN-Gilroy", sans-serif;
+    font-weight: 400;
+    line-height: 31px;
+}
+
+.contact-primary #contactForm .popupQR {
+    width: 40rem;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: -450%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition:
+        transform 0.4s,
+        top 0.4s;
+}
+
+.contact-primary #contactForm .popupQR #momo-logo{
+    width: 30%;
+}
+
+.contact-primary #contactForm .popupSuccess {
+    width: 39rem;
+    background-color: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: -550%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     padding: 0 30px 30px;
@@ -3349,12 +3397,16 @@ html.cl-loaded .home-content__main {
 @media only screen and (max-width: 576px) {
     .contact-primary #contactForm .popup {
         color: green;
-        background-color: darkcyan;
-        /* top: 0%; */
+        top: -650%;
         left: 50%;
         /* top: 0; */
-        width: 30rem;
-        bottom: 50%;
+        width: 40rem;
+    }
+
+    .contact-primary #contactForm .popupQR {
+        width: 33rem;
+        top: -600%;
+        
     }
 }
 .contact-primary #contactForm .popup img {

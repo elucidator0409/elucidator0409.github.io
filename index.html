@@ -540,84 +540,26 @@
               </button>
               <div class="popup" id="popup">
                 <img src="./images/tick.png" />
-                <p>Xin vui lòng kiểm tra thông tin cá nhân:</p>
+                <p style="color: black !important">Xin vui lòng kiểm tra thông tin cá nhân:</p>
                 <div id="reviewData"></div>
                 <button type="button" id="backToForm">Trở về</button>
                 <button type="button" id="reviewPopup">Thanh toán</button>
               </div>
 
               <div class="popupQR" id="popupQR">
-                <p><br>Thanh toán lệ phí tham dự tại đây trước khi đồng ý đăng kí</p>
+                <p style="color: black !important"><br>Thanh toán lệ phí tham dự tại đây trước khi đồng ý đăng kí</p>
                 <img id="momo-logo" src="./images/momo_logo.jpg" />
                 <img src="./images/QR.jpg" />
                 <button type="button" id="backToReview">Trở về</button>
                 <button type="submit" id="confirmPopup">Xác nhận</button>
+              </div>
 
+              <div class="popupSuccess" id="popupSuccess">
+                <h2><br>Thank You!</h2>
+                <p style="color: black !important;text-align: center;">Bạn đã đăng ký thành công !</p>
+                <button type="button" id="successPopup">OK</button>
               </div>
-              <div class="form-field">
-                <p>Email</p>
-                <input
-                  name="contactEmail"
-                  type="email"
-                  id="contactEmail"
-                  placeholder="Your Email"
-                  required
-                  aria-required="true"
-                  class="full-width"
-                />
-              </div>
-              <div class="form-field">
-                <p>Số điện thoại</p>
-                <input
-                  name="contactPhone"
-                  type="tel"
-                  id="contactPhone"
-                  placeholder="Your Phone Number"
-                  minlength="10"
-                  value=""
-                  required
-                  aria-required="true"
-                  class="full-width"
-                  pattern="[0-9]+(\s?[0-9]+)*"
-                  title="Please enter a valid phone number"
-                />
-              </div>
-              <div class="form-field">
-                <p>Nghề nghiệp</p>
-                <input
-                  name="contactSubject"
-                  type="text"
-                  id="contactSubject"
-                  placeholder="Subject"
-                  required
-                  aria-required="true"
-                  class="full-width"
-                />
-              </div>
-              <div class="form-field">
-                <p>Tuổi</p>
-                <input
-                  name="contactAge"
-                  type="number"
-                  id="contactAge"
-                  placeholder="Your Age"
-                  required
-                  aria-required="true"
-                  class="full-width"
-                  min="1"
-                />
-              </div>
-              <div class="form-field">
-                <button type="submit" class="full-width btn--primary">
-                  <p style="margin-bottom: unset !important">Đăng ký</p>
-                </button>
-                <div class="popup" id="popup">
-                  <img src="./images/tick.png" />
-                  <h2>Thank You!</h2>
-                  <p>Your details have been successfully submitted. Thanks!</p>
-                  <button type="button" id="closePopup">OK</button>
-                </div>
-              </div>
+             </div>
             </fieldset>
           </form>
 
@@ -883,12 +825,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 
               const confirmPopup = document.getElementById("popupQR");
+              const successPopup = document.getElementById("popupSuccess");
               const submitButton = document.getElementById('submitButton');
               
 
-              confirmPopup.style.visibility = "hidden";
+              confirmPopup.style.visibility = "hidden";    
+              successPopup.style.visibility = "visible";    
+
               document.getElementById("contactForm").reset();
-              submitButton.style.visibility = "visible"
+              
+              
+              
+              const popupSuccessButton = document.getElementById('successPopup');
+              popupSuccessButton.addEventListener("click", function () {
+                successPopup.style.visibility = "hidden";    
+                submitButton.style.visibility = "visible"
+        
+              });
 
 
              
