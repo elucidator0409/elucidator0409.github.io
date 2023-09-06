@@ -1524,6 +1524,8 @@ input::-moz-focus-inner {
 .header-nav__social {
     list-style: none;
     display: flex;
+    gap: 2rem;
+    justify-content: center;
     margin: 0;
     justify-content: center;
     font-size: 2.5rem;
@@ -4133,9 +4135,9 @@ footer .row {
     align-items: flex-end;
     display: flex;
     font-family: "SVN-Gilroy", sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 31px;
     letter-spacing: 0em;
     text-align: left;
     color: #67a7a3;
@@ -4147,9 +4149,9 @@ footer .row {
     align-items: center;
     display: flex;
     font-family: "SVN-Gilroy", sans-serif;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 300;
-    line-height: 30px;
+    line-height: 31px;
     letter-spacing: 0em;
     text-align: left;
     color: #67a7a3;
@@ -4277,11 +4279,13 @@ p {
     color: white;
     letter-spacing: 0em;
     text-align: left;
-    font-size: 20px;
+    font-size: 26px;
     font-family: "SVN-Gilroy", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 31px;
 }
+
+
 .img-award {
     width: 100px;
     height: 200px;
