@@ -181,6 +181,9 @@
         </li>
       </ul>
     </section>
+
+
+
     <section
       id="about"
       class="s-about"
@@ -460,7 +463,7 @@ Là đơn vị phát triển nền tảng học trực tuyến Global Platform -
     </div>
     <div class="row contact-content" data-aos="fade-up">
       <div class="contact-primary">
-        <iframe frameborder="0"  style="height:80rem;width:99%;border:none;" src='https://forms.zohopublic.com/atcollabo/form/nngk/formperma/OwWyzovuu92ZsLqH65IKXTHOZbNaSzuTpihLowFT3Uo'></iframe>
+        <iframe frameborder="0"  style="height:80rem;width:106%;border:none;" src='https://forms.zohopublic.com/atcollabo/form/nngk/formperma/OwWyzovuu92ZsLqH65IKXTHOZbNaSzuTpihLowFT3Uo'></iframe>
 
         <!-- <form
           name="contactForm"
@@ -959,6 +962,24 @@ document.addEventListener("DOMContentLoaded", function () {
           console.error("Error fetching news:", error);
         });
     </script>
+
+    <!-- slide autoplay -->
+    <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); // Change image every 2 seconds
+      }
+      </script>
     <!-- <a href="index.html#0" title="" class="clients__slide"><img src="images/noti-1.png" /></a> -->
   </body>
 </html>
