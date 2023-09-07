@@ -1659,7 +1659,7 @@ input::-moz-focus-inner {
 }
 
 .header-menu-toggle.opaque {
-    background-color: #000000;
+    background-color: #0A4E80;
     border: 1px solid #66fbee;
 }
 
@@ -1736,7 +1736,7 @@ input::-moz-focus-inner {
         /* right for display menu */
         right: 0px;
         background-color: #0A4E80;
-        position: absolute;
+        /* position: absolute; */
     }
 }
 
@@ -3162,6 +3162,48 @@ html.cl-loaded .home-content__main {
     .clients-testimonials .testimonials p {
         font-size: 1.9rem;
     }
+    .clients-outer {
+        width: 100%;
+        margin-top: 3.6rem;
+        padding-bottom: 4rem;
+        text-align: center;
+        position: relative;
+    }
+
+}
+    @media only screen and (max-width: 800px){
+    #newsContent {
+        width: 75%;
+        padding: 0 !important;
+    }
+}
+    @media only screen and (max-width: 1000px){
+    #newsContent {
+        width: 75%;
+        padding: 0;
+        font-size: 5px;
+    }
+   
+    #buttonBack{
+        width: 30%;
+        padding: 0px; 
+        margin-top: 2rem;
+    border-radius: 10px;
+    border: 2px solid #66FBEE;
+    background-color: #0A4E80; 
+    color: #67A7A3; 
+    cursor: pointer; 
+    text-align: center;
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    }
+
+    .display-2{
+        font-size:4.5rem;
+    }
 }
 /* ===================================================================
  * # noti
@@ -4580,7 +4622,12 @@ p {
     width: 100% !important;
   }
 
+
   #newsContent {
-    width: fit-content;
-    height: auto;
-  }
+    color: #000000;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+    padding: 7rem 3.5rem;
+}
