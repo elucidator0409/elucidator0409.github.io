@@ -4611,6 +4611,8 @@ p {
         width: 20vh;
     }
 }
+
+/* scroll to top */
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
