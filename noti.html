@@ -1,188 +1,245 @@
-<!DOCTYPE html> <!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]--> <!--[if (gte IE 9)|!(IE)]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>ATC-Hackerthon</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/noti.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/noti.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
 
     <script src="js/globalConfig.js"></script>
 
-
     <!-- <script src="js/modernizr.js"></script> -->
     <script src="js/pace.min.js"></script>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Exo:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Exo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body id="top">
+  <body id="top">
     <header class="s-header">
-        <div class="header-logo"> <a class="site-logo" href="index.html"> <img src="images/atc-white.png"
-                    alt="Homepage">
-            </a></div>
-        <nav class="header-nav"><a href="index.html#0" class="header-nav__close" title="close"><span>Close</span></a>
-            <div class="header-nav__content">
-                <h3></h3>
-                <ul class="header-nav__list">
-                    <li class="current"><a class="smoothscroll" href="index.html#home" title="home">Home</a></li>
-                    <li><a class="smoothscroll" href="index.html#about" title="about">1. About us/ Giới thiệu</a></li>
-                    <li><a class="smoothscroll" href="index.html#services" title="services">2. Timeline/ Lịch trình</a>
-                    </li>
-                    <li><a class="smoothscroll" href="index.html#works" title="works">3. Awards/ Giải thưởng</a></li>
-                    <li><a class="smoothscroll" href="index.html#clients" title="clients">4. News/ Tin tức</a>
-                    </li>
-                    <li><a class="smoothscroll" href="index.html#contact" title="contact">5. Register/ Đăng ký</a></li>
-                </ul>
-                <ul class="header-nav__social">
-                  <li>
-                    <a
-                      href="https://www.facebook.com/ATCollabotechnologyschool"
-                      target="_blank"
-                      ><i class="fa fa-facebook"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.youtube.com/@ATCollaboTechnologySchool"
-                      target="_blank"
-                    >
-                      <i class="fa fa-youtube"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href=" https://www.linkedin.com/company/98254227/admin/feed/posts/"
-                      target="_blank"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </li>
-                </ul>
-            </div>
-        </nav><a class="header-menu-toggle" href="index.html#0"> <span class="header-menu-text">Menu</span> <span
-                class="header-menu-icon"></span> </a>
+      <div class="header-logo">
+        <a class="site-logo" href="index.html">
+          <img src="images/atc-white.png" alt="Homepage" />
+        </a>
+      </div>
+      <nav class="header-nav">
+        <a href="index.html#0" class="header-nav__close" title="close"
+          ><span>Close</span></a
+        >
+        <div class="header-nav__content">
+          <h3></h3>
+          <ul class="header-nav__list">
+            <li class="current">
+              <a class="smoothscroll" href="index.html#home" title="home"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="smoothscroll" href="index.html#about" title="about"
+                >1. About us/ Giới thiệu</a
+              >
+            </li>
+            <li>
+              <a
+                class="smoothscroll"
+                href="index.html#services"
+                title="services"
+                >2. Timeline/ Lịch trình</a
+              >
+            </li>
+            <li>
+              <a class="smoothscroll" href="index.html#works" title="works"
+                >3. Awards/ Giải thưởng</a
+              >
+            </li>
+            <li>
+              <a class="smoothscroll" href="index.html#clients" title="clients"
+                >4. News/ Tin tức</a
+              >
+            </li>
+            <li>
+              <a class="smoothscroll" href="index.html#contact" title="contact"
+                >5. Register/ Đăng ký</a
+              >
+            </li>
+          </ul>
+          <ul class="header-nav__social">
+            <li>
+              <a
+                href="https://www.facebook.com/ATCollabotechnologyschool"
+                target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/@ATCollaboTechnologySchool"
+                target="_blank"
+              >
+                <i class="fa fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href=" https://www.linkedin.com/company/98254227/admin/feed/posts/"
+                target="_blank"
+                ><i class="fa fa-linkedin"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <a class="header-menu-toggle" href="index.html#0">
+        <span class="header-menu-text">Menu</span>
+        <span class="header-menu-icon"></span>
+      </a>
     </header>
     <section
-    id="home"
-    class="s-home target-section"
-    data-parallax="scroll"
-    background-position:
-    center
-    center;
-  >
-    <div class="home-content">
-      <div class="row-header home-content__main">
-        <div class="home-content-layout">
-          <div class="home-content__buttons">
-            <a href="index.html#contact" class="smoothscroll btn btn--stroke">
-              <span class="btn-header">Register</span>
-            </a>
-            <a href="index.html#about" class="smoothscroll btn btn--stroke">
-              <span class="btn-header">More About Us</span>
-            </a>
+      id="home"
+      class="s-home target-section"
+      data-parallax="scroll"
+      background-position:
+      center
+      center;
+    >
+      <div class="home-content">
+        <div class="row-header home-content__main">
+          <div class="home-content-layout">
+            <div class="home-content__buttons">
+              <a href="index.html#contact" class="smoothscroll btn btn--stroke">
+                <span class="btn-header">Register</span>
+              </a>
+              <a href="index.html#about" class="smoothscroll btn btn--stroke">
+                <span class="btn-header">More About Us</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <ul class="home-social">
+        <li>
+          <a
+            href="https://www.facebook.com/ATCollabotechnologyschool"
+            target="_blank"
+            ><i class="fa fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@ATCollaboTechnologySchool"
+            target="_blank"
+            ><i class="fa fa-youtube"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href=" https://www.linkedin.com/company/98254227/admin/feed/posts/"
+            target="_blank"
+            ><i class="fa fa-linkedin"></i
+          ></a>
+        </li>
+      </ul>
+    </section>
 
-     
-    </div>
-    <ul class="home-social">
-      <li>
-        <a
-          href="https://www.facebook.com/ATCollabotechnologyschool"
-          target="_blank"
-          ><i class="fa fa-facebook"></i
-        ></a>
-      </li>
-      <li>
-        <a
-          href="https://www.youtube.com/@ATCollaboTechnologySchool"
-          target="_blank"
-          ><i class="fa fa-youtube"></i
-        ></a>
-      </li>
-      <li>
-        <a
-          href=" https://www.linkedin.com/company/98254227/admin/feed/posts/"
-          target="_blank"
-          ><i class="fa fa-linkedin"></i
-        ></a>
-      </li>
-    </ul>
-  </section>
-   
-  <section id="clients" class="s-clients-notipage">
-    <div class="section-header" data-aos="fade-up">
-      <div class="col-full">
-        <h3 class="subhead">News</h3>
-        <h1 class="display-2">Tin tức</h1>
-        <img
-          class="line_bar"
-          style="height: 20px"
-          src="images/line1.png"
-          alt=""
-        />
-      </div>
-    </div>
-    <!-- <div class="container">
-
-      <div id="newsDetails" class="clients-content" style="display:flex;flex-direction: column;justify-content: center; align-items: center;">
-          <div class="banner" >
-              <div>
-              <img id="newsImage" src="" alt="banner-news" style="width: 400; height: 200">
-              </div>
-          </div>
-          <div class="title" style="color: #FFA17A">
-              <br>
-              <h1 class="subhead-noti" id="newsTitle"></h1>
-          </div>
-          <div id="newsContent" class="body" >
-
-          </div>
-        
-      </div>
-      <div id="buttonBack" class="button-back" >
-        <a href="index.html" style="color: white;font-family: 'SVN-Gilroy', sans-serif;">Home</a>
-    </div>
-      
-    </div> -->
-    <div class="clients-outer" data-aos="fade-up">
-      <div class="col-full clients-testimonials" data-aos="fade-up">
+    <section id="clients" class="s-clients-notipage">
+      <div class="section-header" data-aos="fade-up">
         <div class="col-full">
-          <div class="clients"></div>
+          <h3 class="subhead">News</h3>
+          <h1 class="display-2">Tin tức</h1>
+          <img
+            class="line_bar"
+            style="height: 20px"
+            src="images/line1.png"
+            alt=""
+          />
         </div>
       </div>
-    </div>
-  </section>
-   
-    
+      <div class="container">
+        <div
+          id="newsDetails"
+          class="clients-content"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <div class="banner">
+            <div>
+              <img
+                id="newsImage"
+                src=""
+                alt="banner-news"
+                style="width: 400; height: 200"
+              />
+            </div>
+          </div>
+          <div class="title" style="color: #ffa17a">
+            <br />
+            <h1 class="subhead-noti" id="newsTitle"></h1>
+          </div>
+          <div id="newsContent"></div>
+        </div>
+        <div id="buttonBack" class="button-back">
+          <a
+            href="index.html"
+            style="color: white; font-family: 'SVN-Gilroy', sans-serif"
+            >Home</a
+          >
+        </div>
+      </div>
+      <div class="clients-outer" data-aos="fade-up">
+        <div class="col-full clients-testimonials" data-aos="fade-up">
+          <div class="col-full">
+            <div class="clients"></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    
     <footer class="row-6 lg">
-
-        <!-- <div class="row footer-main">
+      <!-- <div class="row footer-main">
             
             <div class="col-six tab-full right footer-subscribe">
                 <h4>Get Notified</h4>
@@ -209,55 +266,74 @@
         </div> -->
     </footer>
     <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
-                        title="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
-                        title="Share"></button> <button class="pswp__button pswp__button--fs"
-                        title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
-                        title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                            <div class="pswp__preloader__cut">
-                                <div class="pswp__preloader__donut"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div>
-                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
         </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button
+              class="pswp__button pswp__button--close"
+              title="Close (Esc)"
+            ></button>
+            <button
+              class="pswp__button pswp__button--share"
+              title="Share"
+            ></button>
+            <button
+              class="pswp__button pswp__button--fs"
+              title="Toggle fullscreen"
+            ></button>
+            <button
+              class="pswp__button pswp__button--zoom"
+              title="Zoom in/out"
+            ></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+          >
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button
+            class="pswp__button pswp__button--arrow--left"
+            title="Previous (arrow left)"
+          ></button>
+          <button
+            class="pswp__button pswp__button--arrow--right"
+            title="Next (arrow right)"
+          ></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="preloader">
-        <div id="loader">
-            <div class="line-scale-pulse-out">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+      <div id="loader">
+        <div class="line-scale-pulse-out">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
+      </div>
     </div>
 
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/noti.js"></script>
-
-   
 
     <!-- <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -283,10 +359,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script> -->
 
-<script>
-    const clientsSlide = document.querySelector('.clients__slide');
+    <script>
+      const clientsSlide = document.querySelector(".clients__slide");
 
-    function loadJS(FILE_URL, async = false) {
+      function loadJS(FILE_URL, async = false) {
         let scriptEle = document.createElement("script");
 
         // scriptEle.setAttribute("src", FILE_URL);
@@ -297,126 +373,124 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.body.appendChild(scriptEle);
 
-        // success event 
+        // success event
         scriptEle.addEventListener("load", () => {
-            console.log("File loaded")
+          console.log("File loaded");
         });
         // error event
         scriptEle.addEventListener("error", (ev) => {
-            console.log("Error on loading file", ev);
+          console.log("Error on loading file", ev);
         });
-    }
+      }
 
-    // Fetch news data from the API
-    console.log(API_DOMAIN + '/api/news')
+      // Fetch news data from the API
+      console.log(API_DOMAIN + "/api/news");
 
-    fetch(API_DOMAIN + '/api/news', {
-  method: 'GET',
-  headers: {
-    'ngrok-skip-browser-warning': '69420',
-  },
-})
-  .then(response => response.json())
-  .then(data => {
-    const clientsContainer = document.querySelector('.clients');
-
-    // Loop through the news data and create image links
-
-      const loadAllImagesPromise = data.map(news => {
-        const imageUrl = API_DOMAIN + `/api/image?fileName=${news.imageSrc}`;
-
-        return fetch(imageUrl, {
-        method: 'GET',
+      fetch(API_DOMAIN + "/api/news", {
+        method: "GET",
         headers: {
-          'ngrok-skip-browser-warning': '69420',
+          "ngrok-skip-browser-warning": "69420",
         },
-        mode: 'cors', // Set the mode to 'cors' to avoid CORB
       })
-        .then(imageResponse => imageResponse.blob())
-        .then(blobData => {
-          // Convert the blob to an object URL
-          const imgObjectUrl = URL.createObjectURL(blobData);
+        .then((response) => response.json())
+        .then((data) => {
+          const clientsContainer = document.querySelector(".clients");
 
-          // Create the template string with dynamic values
-          const template = `
+          // Loop through the news data and create image links
+
+          const loadAllImagesPromise = data.map((news) => {
+            const imageUrl =
+              API_DOMAIN + `/api/image?fileName=${news.imageSrc}`;
+
+            return fetch(imageUrl, {
+              method: "GET",
+              headers: {
+                "ngrok-skip-browser-warning": "69420",
+              },
+              mode: "cors", // Set the mode to 'cors' to avoid CORB
+            })
+              .then((imageResponse) => imageResponse.blob())
+              .then((blobData) => {
+                // Convert the blob to an object URL
+                const imgObjectUrl = URL.createObjectURL(blobData);
+
+                // Create the template string with dynamic values
+                const template = `
           <a href="noti.html?id=${news.id}" title="" class="clients__slide">
                   <img src="${imgObjectUrl}" style="width:100%; height:auto; margin-bottom:1.5rem;"/> 
                   <h5  style="font-family: 'SVN-Gilroy', sans-serif; font-size: 26px; font-weight: 700; line-height: 31px; letter-spacing: 0em; text-align: left; color:#205D86;"> ${news.title}  </h5>
               </a>`;
 
-          // Convert the template string to a DOM element
-          const templateElement = document.createRange().createContextualFragment(template);
+                // Convert the template string to a DOM element
+                const templateElement = document
+                  .createRange()
+                  .createContextualFragment(template);
 
-          // Append the template element to the clients container
-          clientsContainer.appendChild(templateElement);
-        })
-      })
+                // Append the template element to the clients container
+                clientsContainer.appendChild(templateElement);
+              });
+          });
 
-      Promise.all(loadAllImagesPromise).then(() => {
-        loadJS('js/slider.js', false);
-      }).catch(imageError => {
-          console.error('Error fetching image:', imageError);
-        });
-        
-
-    console.log('Fetch completed');
-  })
-  .catch(error => {
-    console.error('Error fetching news:', error);
-  });
-
-
-    
-    
-</script>
-
-<script>
-    // Function to get query parameter value by name
-    function getQueryParam(name) {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get(name);
-    }
-
-    // Get the id from the query parameter
-    const id = getQueryParam('id');
-
-    // Fetch news data by id
-    fetch(API_DOMAIN + `/api/news/${id}`, {
-  method: 'GET',
-  headers: {
-    'ngrok-skip-browser-warning': '69420',
-  },
-})
-        .then(response => response.json())
-        .then(data => {
-            // Update the content area with news details
-            document.getElementById('newsTitle').textContent = data.title;
-            const imageUrl = API_DOMAIN + `/api/image?fileName=${data.imageSrc}`;;
-
-            fetch(imageUrl, {
-                method: 'GET',
-                headers: {
-                'ngrok-skip-browser-warning': '69420',
-                },
-                mode: 'cors', // Set the mode to 'cors' to avoid CORB
+          Promise.all(loadAllImagesPromise)
+            .then(() => {
+              loadJS("js/slider.js", false);
             })
-                .then(imageResponse => imageResponse.blob())
-                .then(blobData => {
-                // Convert the blob to an object URL
-                const imgObjectUrl = URL.createObjectURL(blobData);
-                document.getElementById('newsImage').src = imgObjectUrl;
-                }).catch(imageError => {
-            console.error('Error fetching image:', imageError);
+            .catch((imageError) => {
+              console.error("Error fetching image:", imageError);
             });
 
-            document.getElementById('newsContent').innerHTML = data.content;
+          console.log("Fetch completed");
         })
-        .catch(error => {
-            console.error('Error fetching news details:', error);
+        .catch((error) => {
+          console.error("Error fetching news:", error);
         });
-</script>
+    </script>
 
+    <script>
+      // Function to get query parameter value by name
+      function getQueryParam(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+      }
 
-</body>
+      // Get the id from the query parameter
+      const id = getQueryParam("id");
 
+      // Fetch news data by id
+      fetch(API_DOMAIN + `/api/news/${id}`, {
+        method: "GET",
+        headers: {
+          "ngrok-skip-browser-warning": "69420",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          // Update the content area with news details
+          document.getElementById("newsTitle").textContent = data.title;
+          const imageUrl = API_DOMAIN + `/api/image?fileName=${data.imageSrc}`;
+
+          fetch(imageUrl, {
+            method: "GET",
+            headers: {
+              "ngrok-skip-browser-warning": "69420",
+            },
+            mode: "cors", // Set the mode to 'cors' to avoid CORB
+          })
+            .then((imageResponse) => imageResponse.blob())
+            .then((blobData) => {
+              // Convert the blob to an object URL
+              const imgObjectUrl = URL.createObjectURL(blobData);
+              document.getElementById("newsImage").src = imgObjectUrl;
+            })
+            .catch((imageError) => {
+              console.error("Error fetching image:", imageError);
+            });
+
+          document.getElementById("newsContent").innerHTML = data.content;
+        })
+        .catch((error) => {
+          console.error("Error fetching news details:", error);
+        });
+    </script>
+  </body>
 </html>

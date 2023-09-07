@@ -4565,3 +4565,8 @@ p {
   .banner {
     width: 100% !important;
   }
+
+  #newsContent {
+    width: fit-content;
+    height: auto;
+  }
