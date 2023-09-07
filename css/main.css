@@ -3396,7 +3396,7 @@ html.cl-loaded .home-content__main {
 .contact-primary,
 .contact-secondary {
     float: left;
-    padding: 0 5rem;
+    padding: 0 4rem;
 }
 
 .contact-primary {
@@ -3535,7 +3535,7 @@ html.cl-loaded .home-content__main {
 @media screen and (max-width:576px) {
     .contact-secondary .contact-info {
         text-align: center;
-        margin-top: unset;
+        margin-top: 4rem;
     }
 }
 .contact-secondary .cinfo {
