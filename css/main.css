@@ -1630,7 +1630,7 @@ input::-moz-focus-inner {
     letter-spacing: 0.3rem;
     color: #39b54a;
     -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .header-menu-toggle.opaque {
@@ -1710,7 +1710,7 @@ input::-moz-focus-inner {
     .header-menu-toggle {
         /* right for display menu */
         right: 0px;
-        background-color: black;
+        background-color: #0A4E80;
         position: absolute;
     }
 }
@@ -2291,10 +2291,10 @@ html.cl-loaded .home-content__main {
     }
     .about-content3 {
         font-family: "SVN-Gilroy", sans-serif;
-        font-size: 11px;
+        font-size: 14px;
         font-weight: 300;
         line-height: 31px;
-        letter-spacing: -0.5px;
+        letter-spacing: 0;
         text-align: justify;
         margin-bottom: 2rem;
     }
