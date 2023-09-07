@@ -4555,15 +4555,17 @@ p {
         padding-top: unset !important;
     }
 }
+
 #list-member {
-    padding: 0 25rem !important;
+    padding: 0 25rem ;
 }
-@media (max-width: 576px) {
+@media (max-width: 1200px) {
     #list-member {
         /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
         padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
     }
 }
+
 .button-payment {
   color: #0A4E80; /* Màu chữ xanh #0A4E80 */
   padding: 10px 20px; /* Kích thước nút */

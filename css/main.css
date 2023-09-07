@@ -1360,7 +1360,7 @@ text-align: center;
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
     .section-header {
-        max-width: 800px;
+        /* max-width: 800px; */
     }
 }
 
@@ -1482,6 +1482,14 @@ text-align: center;
     transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 600px) {
+    .header-logo a {
+        display: none;
+        width: 63px;
+        height: 85px;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1000px) {
     .header-logo a {
         display: none;
         width: 63px;
@@ -1871,6 +1879,7 @@ text-align: center;
     }
 }
 
+
 .home-content__buttons .btn {
     /* display: flex; */
     width: 215px;
@@ -2182,6 +2191,13 @@ html.cl-loaded .home-content__main {
         display:none;
     }
 }
+@media only screen and (max-width: 1000px) {
+   
+    .home-content__buttons {
+        display: none;
+        padding-top: 1.2rem;
+        text-align: center;
+    }
 
 @media only screen and (max-width: 600px) {
     .home-content h1 {
@@ -3686,7 +3702,11 @@ html.cl-loaded .home-content__main {
 @media only screen and (max-width: 1000px) {
     .contact-content {
         max-width: 700px;
+        display: flex;
+        flex-direction: column;
     }
+   
+
     .contact-primary,
     .contact-secondary {
         float: none;
@@ -4392,6 +4412,13 @@ p {
     margin-bottom: 2rem;
     }
 }
+@media screen and (max-width: 576px) {
+    .award-row1 {
+        display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    }
+}
 
 .award-row2 {
     display: flex;
@@ -4411,6 +4438,12 @@ p {
         padding-left: 0rem;
     }
 }
+@media screen and (max-width: 768px) {
+    .wrap-layout-award {
+        padding-left: 0rem;
+    }
+}
+
 .custom-height {
     height: 50%;
     width: auto;
@@ -4526,7 +4559,7 @@ p {
 /* 
 
 */
-.test {
+/* .test {
     background-image: url("./images/bg-banner.png");
     background-size: 100% 100%;
     min-height: 60vh;
@@ -4534,7 +4567,7 @@ p {
     position: relative;
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
-}
+} */
 .color-overlay {
     position: absolute;
     width: 100%;
@@ -4553,7 +4586,7 @@ p {
     }
 }
 #list-member {
-    padding: 0 25rem !important;
+    padding: 0 25rem ;
 }
 @media (max-width: 576px) {
     #list-member {
@@ -4561,6 +4594,14 @@ p {
         padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
     }
 }
+@media (max-width: 1000px) {
+    #list-member {
+        /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
+        padding: 0rem !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
+        margin-bottom: 2rem;
+    }
+}
+
 .button-payment {
   color: #0A4E80; /* Màu chữ xanh #0A4E80 */
   padding: 10px 20px; /* Kích thước nút */
