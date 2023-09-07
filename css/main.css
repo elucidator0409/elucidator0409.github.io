@@ -1208,6 +1208,42 @@ input::-moz-focus-inner {
     color: #66fbee;
 }
 
+/* text for section mentors */
+.subhead-mentors + .display-2-mentors {
+    margin-top: 2.6rem;
+    
+}
+
+.subhead-mentors {
+    font-family: "SVN-Gilroy", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: #0E4D80;
+    /* margin-right: 50px; */
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 37px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    line-height: 10px;
+    letter-spacing: 0em;
+}
+.display-2-mentors {
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 70px;
+    font-weight: 700 !important;
+    line-height: 73px;
+    letter-spacing: 0em;
+    text-align: center;
+    color:  #67A8A3;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+/* 
+end section mentor
+*/
+
 .subhead {
     font-family: "SVN-Gilroy", sans-serif;
     text-transform: uppercase;
@@ -1248,6 +1284,15 @@ input::-moz-focus-inner {
     .display-2 {
         font-size: 4rem;
     }
+    .display-2-mentors {
+        font-family: "SVN-Gilroy", sans-serif;
+font-size: 25px;
+font-weight: 700;
+line-height: 26px;
+letter-spacing: 0em;
+text-align: center;
+
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1260,6 +1305,10 @@ input::-moz-focus-inner {
     .subhead {
         margin-top: 5rem;
         font-size: 3rem !important;
+    }
+    .subhead-mentors {
+        font-size: 3rem !important;
+        line-height: 37px;
     }
 }
 
@@ -2912,6 +2961,19 @@ html.cl-loaded .home-content__main {
     background-position: center center;
 }
 
+/* Mentor Section show up */
+.s-mentors {
+    padding-top: 10.2rem;
+    padding-bottom: 10rem;
+
+    background-color: white;
+
+    color: #757575;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+}
+
 /* ------------------------------------------------------------------- 
  * ## slider
  * ------------------------------------------------------------------- */
@@ -4554,7 +4616,19 @@ p {
     bottom: 20px;
     right: 20px;
     display: none;
+    background-color: #0A4E80;
+    border: 3px solid #66FBEE;
   }
   .banner {
     width: 100% !important;
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .mentor-desktop {
+      display: none; /* Ẩn ảnh desktop khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
+    }
+    .mySlides {
+      display: block; /* Hiển thị các ảnh slides khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
+    }
   }
