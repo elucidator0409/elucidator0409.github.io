@@ -4624,7 +4624,7 @@ p {
   }
 
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1200px) {
     .mentor-desktop {
       display: none; /* Ẩn ảnh desktop khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
     }
@@ -4632,3 +4632,5 @@ p {
       display: block; /* Hiển thị các ảnh slides khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
     }
   }
+  
+  
