@@ -4483,21 +4483,17 @@ p {
     }
 }
 .wrap-layout-award {
-    padding-left: 25rem;
+    padding-left: 20rem;
 }
-@media screen and (max-width: 768px) {
+
+@media  (min-width: 769px) and (max-width: 1024px) {
     .wrap-layout-award {
         padding-left: 0rem;
     }
 }
-@media screen and (min-width: 769px) {
+@media  (max-width: 1280px) {
     .wrap-layout-award {
-        padding-left: 0rem;
-    }
-}
-@media screen and (max-width: 768px) {
-    .wrap-layout-award {
-        padding-left: 0rem;
+        padding-left: 10rem;
     }
 }
 
@@ -4591,7 +4587,7 @@ p {
 }
 .img-award4 {
     width: 95px;
-    height: 60px;
+    height: 75px;
     align-self: flex-end;
 }
 .logo-contact-secondary {
