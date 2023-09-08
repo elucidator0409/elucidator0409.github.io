@@ -4483,8 +4483,12 @@ p {
 .wrap-layout-award {
     padding-left: 20rem;
 }
-
-@media (min-width: 578px) and (max-width: 768px) {
+@media  (max-width: 576px) {
+    .wrap-layout-award {
+        padding-left: 0rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 768px) {
     .wrap-layout-award {
         padding-left: 10rem;
     }
