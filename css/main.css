@@ -1268,33 +1268,24 @@ end section mentor
  * responsive:
  * display headings
  * ------------------------------------------------------------------- */
-@media only screen and (max-width: 1200px) {
-    .display-1 {
-        font-size: 7.2rem;
-    }
-    .display-2 {
-        font-size: 4.4rem;
-    }
-}
 
-@media only screen and (max-width: 800px) {
-    .display-1 {
-        font-size: 6.5rem;
-    }
-    .display-2 {
-        font-size: 4rem;
-    }
+@media only screen and (max-width: 1000px) {
     .display-2-mentors {
-        font-family: "SVN-Gilroy", sans-serif;
-font-size: 25px;
-font-weight: 700;
-line-height: 26px;
-letter-spacing: 0em;
-text-align: center;
-
+        font-size: 50px;
+    }
+.subhead-mentors {
+        font-size: 26px;
     }
 }
 
+@media only screen and (max-width: 400px) {
+    .display-1 {
+        font-size: 4.2rem;
+    }
+    .display-2 {
+        font-size: 3rem !important;
+    }
+}
 @media only screen and (max-width: 600px) {
     .display-1 {
         font-size: 5rem;
@@ -1307,17 +1298,32 @@ text-align: center;
         font-size: 3rem !important;
     }
     .subhead-mentors {
-        font-size: 3rem !important;
-        line-height: 37px;
+        font-size: 3rem ;
+        line-height: 5px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .display-1 {
+        font-size: 6.5rem;
+    }
+    .display-2 {
+        font-size: 4rem;
+    }
+    .display-2-mentors {
+        font-size: 26px;
+    line-height: 50px;
+    }
+    .subhead-mentors {
+font-size: 19px;
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1200px) {
     .display-1 {
-        font-size: 4.2rem;
+        font-size: 7.2rem;
     }
     .display-2 {
-        font-size: 3rem !important;
+        font-size: 4.4rem;
     }
 }
 
@@ -1366,7 +1372,7 @@ text-align: center;
 
 @media only screen and (max-width: 900px) {
     .section-header {
-        max-width: 700px;
+        /* max-width: 700px; */
     }
 }
 
@@ -1785,6 +1791,11 @@ text-align: center;
         display: none;
     }
 }
+@media only screen and (max-width: 1024px) {
+    .header-menu-text {
+        width: 108px;
+    }
+}
 /* ===================================================================
  * # home 
  *
@@ -1878,7 +1889,11 @@ text-align: center;
         display: none;
     }
 }
-
+@media screen and (max-width: 1000px) {
+    .home-content__buttons {
+        display: none;
+    }
+}
 
 .home-content__buttons .btn {
     /* display: flex; */
@@ -1980,12 +1995,21 @@ text-align: center;
     position: relative;
     padding: 0.9rem 0;
 }
+@media (min-width: 577px) and (max-width: 1000px) {
+    .home-social li {
+        padding: 0.5rem 0;
+    }
+    .home-social {
+        top: 70%;
+    }
+}
 
 .home-social li a {
     display: block;
     width: 33px;
     height: 33px;
 }
+
 
 .home-social i,
 .home-social span {
@@ -2450,7 +2474,7 @@ html.cl-loaded .home-content__main {
         border-right: 1px solid rgba(255, 255, 255, 0.25);
     }
 }
-
+/*  */
 @media only screen and (max-width: 800px) {
     .about-desc {
         font-size: 2rem;
@@ -2463,6 +2487,18 @@ html.cl-loaded .home-content__main {
         margin-top: 1.2rem;
         font-size: 1rem;
     }
+}
+@media only screen and (max-width: 1024px){
+   .stats__count{ font-family: "SVN-Gilroy", sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: normal;
+    color: #ffffff;
+    position: relative;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 }
 
 @media only screen and (max-width: 700px) {
@@ -4329,6 +4365,23 @@ footer .row {
         margin-bottom: 2rem;
     }
 }
+@media (min-width: 577px) and (max-width: 1000px) {
+    .award-layout1{
+        justify-content: center;
+    }
+    .award-layout{
+        justify-content: center;
+    }
+    .award-row1 {
+        gap: 1rem;
+    }
+    .award-row2 {
+        gap: 1rem;
+    }
+    .img-award4 {
+        height: 75px;
+    }
+  }
 
 .register-text {
     font-family: "SVN-Gilroy", sans-serif;
@@ -4405,27 +4458,15 @@ p {
     margin-bottom: 10rem;
     align-items: center;
 }
-@media screen and (max-width: 576px) {
+
+@media screen and (max-width: 768px) {
     .award-row1 {
         display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
     }
 }
-/* @media screen and (max-width: 576px) {
-    .award-row1 {
-        display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    }
-} */
-@media screen and (max-width: 576px) {
-    .award-row1 {
-        display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-    }
-}
+
 
 
 .award-row2 {
@@ -4442,6 +4483,11 @@ p {
     padding-left: 25rem;
 }
 @media screen and (max-width: 768px) {
+    .wrap-layout-award {
+        padding-left: 0rem;
+    }
+}
+@media screen and (min-width: 769px) {
     .wrap-layout-award {
         padding-left: 0rem;
     }
@@ -4602,11 +4648,10 @@ p {
         padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
     }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 577px) and (max-width: 1000px)  {
     #list-member {
-        /* Thiết lập CSS cho màn hình có tỷ lệ dưới 1000px ở đây */
-        padding: 0rem !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
-        margin-bottom: 2rem;
+        padding: 0 10rem !important;
+        margin-bottom: 5rem !important;
     }
 }
 
@@ -4684,4 +4729,15 @@ p {
     }
   }
   
-  
+  /* iframe responsive */
+
+  @media  (max-width:576px) {
+    .iframe-form {
+            height: 82rem;
+    }
+}
+@media (min-width: 577px) and (max-width: 1000px) {
+    .iframe-form {
+        width: 100%;
+    }
+}
