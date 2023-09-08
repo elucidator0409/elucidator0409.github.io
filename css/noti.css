@@ -4559,10 +4559,12 @@ p {
 #list-member {
     padding: 0 25rem ;
 }
-@media (max-width: 1200px) {
+
+@media screen and  (max-width: 1000px) {
     #list-member {
         /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
-        padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
+        padding: 0rem !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
+        margin-bottom: 2rem;
     }
 }
 

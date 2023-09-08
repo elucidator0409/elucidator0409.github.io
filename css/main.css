@@ -2191,14 +2191,14 @@ html.cl-loaded .home-content__main {
         display:none;
     }
 }
-@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 1000px) {
    
     .home-content__buttons {
         display: none;
         padding-top: 1.2rem;
         text-align: center;
     }
-}
+} */
 @media only screen and (max-width: 600px) {
     .home-content h1 {
         font-size: 3.8rem;
@@ -4412,6 +4412,13 @@ p {
     margin-bottom: 2rem;
     }
 }
+/* @media screen and (max-width: 576px) {
+    .award-row1 {
+        display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    }
+} */
 @media screen and (max-width: 576px) {
     .award-row1 {
         display: flex;
@@ -4419,6 +4426,7 @@ p {
     margin-bottom: 2rem;
     }
 }
+
 
 .award-row2 {
     display: flex;
@@ -4588,15 +4596,15 @@ p {
 #list-member {
     padding: 0 25rem ;
 }
-@media (max-width: 576px) {
+@media screen and  (max-width: 576px) {
     #list-member {
         /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
         padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
     }
 }
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     #list-member {
-        /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
+        /* Thiết lập CSS cho màn hình có tỷ lệ dưới 1000px ở đây */
         padding: 0rem !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
         margin-bottom: 2rem;
     }
