@@ -2198,7 +2198,7 @@ html.cl-loaded .home-content__main {
         padding-top: 1.2rem;
         text-align: center;
     }
-
+}
 @media only screen and (max-width: 600px) {
     .home-content h1 {
         font-size: 3.8rem;
