@@ -4477,7 +4477,7 @@ p {
 @media screen and (max-width: 768px) {
     .award-row2 {
         flex-direction: column;
-        justify-content: spawrap-layout-awardce-between;
+        justify-content: space-between;
     }
 }
 .wrap-layout-award {
