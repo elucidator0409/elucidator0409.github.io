@@ -4736,7 +4736,8 @@ p {
       display: none; /* Ẩn ảnh desktop khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
     }
     .mySlides {
-      display: block; /* Hiển thị các ảnh slides khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
+      width: 100%;
+        display: block; /* Hiển thị các ảnh slides khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
     }
   }
   
@@ -4755,4 +4756,9 @@ p {
 /* newsContent image design */
 #newsContent p span span img {
     width: 50% !important;
+}
+.text-description-mentors {
+    text-align: left !important; 
+    font-size: 15px; font-family: 'SVN-Gilroy', sans-serif; 
+    color: #67a7a3;
 }
