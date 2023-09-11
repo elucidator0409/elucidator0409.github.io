@@ -1192,9 +1192,23 @@ input::-moz-focus-inner {
     margin-top: 0;
     text-transform: uppercase;
 }
+.display-3-below {
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 21px ;
+    font-weight: 700 !important;
+    line-height: 73px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 0;
+    text-transform: uppercase;
+}
 @media screen and (max-width:576px) {
     .display-3 {
         font-size: 22px !important;
+    }
+    .display-3-below {
+        font-size: 14px;
     }
 }
 
@@ -4496,7 +4510,7 @@ p {
 }
 @media (min-width: 577px) and (max-width: 768px) {
     .wrap-layout-award {
-        padding-left: 10rem;
+        padding-left: 0rem;
     }
 }
 @media  (min-width: 769px) and (max-width: 1024px) {
@@ -4693,7 +4707,7 @@ p {
 .cinfo-text {
     
     font-size: 21px;
-
+    text-align: center;
 }
 @media screen and (max-width:576px) {
     .cinfo-text {
@@ -4727,7 +4741,7 @@ p {
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 0px;
     display: none;
     background-color: #0A4E80;
     border: 3px solid #66FBEE;
