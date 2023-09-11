@@ -1336,6 +1336,12 @@ font-size: 19px;
     margin-bottom: 3.6rem;
     /* max-width: 960px; */
 }
+.section-mentor {
+    text-align: center;
+    position: relative;
+    /* margin-bottom: 3.6rem; */
+    /* max-width: 960px; */
+}
 
 .section-header.has-bottom-sep {
     padding-bottom: 2.1rem;
@@ -4761,4 +4767,6 @@ p {
     text-align: left !important; 
     font-size: 15px; font-family: 'SVN-Gilroy', sans-serif; 
     color: #67a7a3;
+    width: 80%;
+    margin: 0 auto;
 }
