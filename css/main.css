@@ -4758,6 +4758,7 @@ p {
     }
     .mySlides {
       width: 100%;
+      height: 74rem;
         display: block; /* Hiển thị các ảnh slides khi độ rộng màn hình nhỏ hơn hoặc bằng 800px */
     }
   }
