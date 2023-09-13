@@ -1,2 +1,2 @@
 // globalConfig.js
-var API_DOMAIN = 'https://hapi.atcollabo.com'; 
+var API_DOMAIN = 'hapi.atcollabo.com'; 
