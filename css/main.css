@@ -1824,9 +1824,6 @@ font-size: 19px;
 .s-home {
     width: 100%;
     height: auto;
-
-    /* background-color: transparent; */
-    /* background-color: transparent; */
     position: relative;
     display: flex;
     background-image: url(../images/bg-banner.png);
@@ -1915,7 +1912,40 @@ font-size: 19px;
         display: none;
     }
 }
-
+@media only screen and (max-width: 576px) {
+    .s-home {
+        width: 100%;
+        background-size: cover;
+        display: flex;
+        min-height: 25vh;
+    }
+}
+@media only screen and (min-width:768px) and (max-width:1028px) {
+    .s-home {
+        max-height: 533px;
+        min-height: 400px;
+    }
+}
+@media (min-width:1280px) and (max-width:1368px) {
+    .s-home {
+        min-height: 720px;
+    }
+    .home-content__buttons {
+        padding-top: 42rem;
+    gap: 6rem;
+    margin-left: 0rem;
+}
+}
+@media (min-width:1369px) and (max-width:1920px) {
+    .s-home {
+        min-height: 760px;
+    }
+    .home-content__buttons {
+        /* padding-top: 42rem; */
+    gap: 6rem;
+    margin-left: 27rem;
+}
+}
 .home-content__buttons .btn {
     /* display: flex; */
     width: 215px;
@@ -2319,17 +2349,7 @@ html.cl-loaded .home-content__main {
         display: none;
     }
 }
-@media only screen and (max-width: 576px) {
-    .s-home {
-        /* min-height: 630px; */
-        width: 100%;
-        background-size: cover;
-        display: flex;
-        min-height: 23vh;
-        /* padding-bottom: 10rem; */
 
-    }
-}
 /* ===================================================================
  * # about
  *
@@ -4670,22 +4690,22 @@ p {
     .pt-3{
         padding-top: unset !important;
     }
-}
-#list-member {
-    padding: 0 25rem ;
-}
-@media screen and  (max-width: 576px) {
     #list-member {
         /* Thiết lập CSS cho màn hình có tỷ lệ dưới 576px ở đây */
         padding: unset !important; /* Ví dụ: Thiết lập padding khác cho màn hình nhỏ hơn */
     }
 }
-@media screen and (min-width: 577px) and (max-width: 1000px)  {
+#list-member {
+    padding: 0 25rem ;
+}
+
+@media screen and (min-width: 577px) and (max-width: 1280px)  {
     #list-member {
         padding: 0 10rem !important;
         margin-bottom: 5rem !important;
     }
 }
+
 
 .button-payment {
   color: #0A4E80; /* Màu chữ xanh #0A4E80 */

@@ -404,7 +404,7 @@
   *
   * ------------------------------------------------------------------- */
  .row {
-     width: 94%;
+     width: 94% !important;
      max-width: 1200px;
      padding-left: 100px;
      margin: 0 auto !important;
