@@ -1208,7 +1208,7 @@ input::-moz-focus-inner {
         font-size: 22px !important;
     }
     .display-3-below {
-        font-size: 14px;
+        font-size: 13.5px;
     }
 }
 
@@ -1245,7 +1245,7 @@ input::-moz-focus-inner {
 }
 .display-2-mentors {
     font-family: "SVN-Gilroy", sans-serif;
-    font-size: 70px;
+    font-size: 5.5rem;
     font-weight: 700 !important;
     line-height: 73px;
     letter-spacing: 0em;
@@ -2247,11 +2247,11 @@ html.cl-loaded .home-content__main {
         max-width: 490px;
     }
     .home-content__buttons {
-        display: none;
+        /* display: none; */
         padding-top: 1.2rem;
         text-align: center;
     }
-    .home-content__buttons .btn {
+    .home-content__buttons .btn-about {
         display: block;
         width: 100%;
         margin: 1.5rem 0 0 0;
@@ -4388,7 +4388,7 @@ footer .row {
     display: flex;
     width: fit-content;
     gap: 30px;
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
 }
 .award-layout1 {
     display: flex;
@@ -4416,12 +4416,16 @@ footer .row {
     }
     .award-row1 {
         gap: 1rem;
+        align-items: unset !important;
     }
     .award-row2 {
         gap: 1rem;
     }
     .img-award4 {
         height: 75px;
+    }
+    .text-award1 {
+        margin-top: 0;
     }
   }
 
@@ -4634,7 +4638,7 @@ p {
 }
 .img-award3 {
     width: 95px;
-    height: 55px;
+    height: 60px;
 
     align-self: flex-end;
 }
@@ -4783,6 +4787,12 @@ p {
     }
   }
   
+@media screen and (min-width:1200px) {
+    .mentor-mobile {
+        display: none;
+    }
+  }
+  
   /* iframe responsive */
 
   @media  (max-width:576px) {
@@ -4805,4 +4815,15 @@ p {
     color: #67a7a3;
     width: 80%;
     margin: 0 auto;
+}
+@media screen and (max-width:576px) {
+    .btn-register {
+        display: block;
+    }
+    .smoothscroll btn btn--stroke {
+        display: none;
+    }
+    .btn-about {
+        display: none;
+    }
 }
