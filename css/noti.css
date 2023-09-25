@@ -144,11 +144,11 @@ h6,
 p {
     color:black;
     letter-spacing: 0em;
-    text-align: left;
+    text-align: justify;
     font-size: 26px;
     font-family: "SVN-Gilroy", sans-serif;
     font-weight: 300;
-    line-height: 31px;
+    line-height: 1.5 !important;
 }
 h1,
 .h1,
@@ -175,6 +175,8 @@ h4,
     }
     p {
         font-size: 11pt !important;
+        text-align: justify !important;
+        line-height: 32px !important; 
     }
 }
 
