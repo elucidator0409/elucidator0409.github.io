@@ -141,7 +141,15 @@ h6,
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
-
+p {
+    color:black;
+    letter-spacing: 0em;
+    text-align: left;
+    font-size: 26px;
+    font-family: "SVN-Gilroy", sans-serif;
+    font-weight: 300;
+    line-height: 31px;
+}
 h1,
 .h1,
 h2,
@@ -164,6 +172,9 @@ h4,
     h4,
     .h4 {
         margin-top: 5.1rem;
+    }
+    p {
+        font-size: 11pt !important;
     }
 }
 
@@ -4361,15 +4372,7 @@ footer .row {
         text-align: left;
     }
 }
-p {
-    color:black;
-    letter-spacing: 0em;
-    text-align: left;
-    font-size: 26px;
-    font-family: "SVN-Gilroy", sans-serif;
-    font-weight: 300;
-    line-height: 31px;
-}
+
 
 
 .img-award {
