@@ -740,7 +740,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     <script>
          fetch(API_DOMAIN + "/api/stats", {
-        method: "POST",
+        method: "GET",
         headers: {
           "ngrok-skip-browser-warning": "69420",
         },
@@ -829,7 +829,7 @@ document.addEventListener("DOMContentLoaded", function () {
           };
 
           fetch(API_DOMAIN + "/api/register", {
-            method: "GET",
+            method: "POST",
             headers: {
               "Content-Type": "application/json",
             },
