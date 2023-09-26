@@ -215,23 +215,20 @@
         >
           <div class="col-block stats__col">
             <div id="register" class="stats__count">
-              <span id="days"></span>
             </div>
             <h5 style="color: #67a7a3">Register</h5>
           </div>
           <div class="col-block stats__col">
-            <div id="online" class="stats__count"><span id="hours"></span></div>
+            <div id="online" class="stats__count"></div>
             <h5 style="color: #67a7a3">Online Pass</h5>
           </div>
           <div class="col-block stats__col">
             <div id="offline" class="stats__count">
-              <span id="minutes"></span>
             </div>
             <h5 style="color: #67a7a3">Offline Pass</h5>
           </div>
           <div class="col-block stats__col">
             <div id="hackathon" class="stats__count">
-              <span id="seconds"></span>
             </div>
             <h5 style="color: #67a7a3">Hackathon</h5>
           </div>
@@ -742,7 +739,12 @@ document.addEventListener("DOMContentLoaded", function () {
 </script> -->
 
     <script>
-        fetch('http://localhost:8080/api/stats')
+         fetch(API_DOMAIN + "/api/stats", {
+        method: "POST",
+        headers: {
+          "ngrok-skip-browser-warning": "69420",
+        },
+      })
             .then(response => response.json())
             .then(data => {
                 const registerElement = document.getElementById('register');
