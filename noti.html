@@ -502,7 +502,7 @@ anchorElements.forEach((element) => {
 });
 
 // Sort id
-elementsWithId.sort((a, b) => a.id - b.id);
+elementsWithId.sort((a, b) => b.id - a.id);
 
 // Loop and append position ID
 const container = document.querySelector('.slick-track'); 
