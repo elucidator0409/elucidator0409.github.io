@@ -3395,18 +3395,20 @@ html.cl-loaded .home-content__main {
 }
 
 .contact-content {
-    max-width: 1000px;
     /* background-color: rgba(0, 0, 0, 0.2); */
     color: rgba(255, 255, 255, 0.4);
-    padding-top: 6rem;
     padding-bottom: 6rem;
     font-family: "montserrat-light", sans-serif;
     font-size: 1.5rem;
     line-height: 2;
     position: relative;
-
-    
-      
+    width: 100%;
+    max-width: 1200px;
+    padding-left: unset !important;
+    margin: 0 auto !important;
+    /* display: -webkit-box; */
+    /* display: flex; */
+    flex-wrap: unset !important;
 }
 
 .contact-content h3 {
@@ -3602,7 +3604,7 @@ html.cl-loaded .home-content__main {
 }
 
 .contact-secondary {
-    width: 45%;
+    width: 100%;
 }
 
 .contact-secondary::before {
@@ -3618,7 +3620,7 @@ html.cl-loaded .home-content__main {
 .contact-secondary .contact-info {
     position: relative;
     text-align: start;
-    margin-top: 20rem;
+    margin-top: 10rem;
     text-align: center;
 }
 @media screen and (max-width:576px) {
@@ -4822,4 +4824,28 @@ p {
     .btn-about {
         display: none;
     }
+}
+#searchResult {
+    display: none;
+}
+.search-wrapper {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 15px;
+}
+.form-control {
+    font-size: 18px;
+    border: 2px solid #0087cc !important;
+    color: gray;
+    border-radius: 5px;
+    outline: 0;
+    padding: 10px;
+}
+.searchButton {
+    font-size: 18px;
+    border: 2px solid #0087cc !important;
+    height: -webkit-fill-available;
+}
+.s-contact .section-header .contact-content {
+    width: 100% !important;
 }

@@ -479,7 +479,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Get the id from the query parameter
       const id = getQueryParam("id");
 
-
       // Fetch news data by id
       fetch(API_DOMAIN + `/api/news/${id}`, {
         method: "GET",
@@ -489,26 +488,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => response.json())
         .then((data) => {
-          const anchorElements = document.querySelectorAll('a.clients__slide');
-
-// Tạo một mảng để lưu trữ thông tin về các thẻ <a> và giá trị id
-const elementsWithId = [];
-
-// Lặp qua từng thẻ <a> và trích xuất giá trị id từ URL
-anchorElements.forEach((element) => {
-  const url = new URL(element.href);
-  const id = url.searchParams.get('id');
-  elementsWithId.push({ element, id });
-});
-
-// Sort id
-elementsWithId.sort((a, b) => b.id - a.id);
-
-// Loop and append position ID
-const container = document.querySelector('.slick-track'); 
-elementsWithId.forEach((item) => {
-  container.appendChild(item.element);
-});
           // Update the content area with news details
           document.getElementById("newsTitle").textContent = data.title;
           const imageUrl = API_DOMAIN + `/api/image?fileName=${data.imageSrc}`;
