@@ -161,9 +161,72 @@
         <div class="row-header home-content__main">
           <div class="home-content-layout">
             <div class="home-content__buttons">
-              <a href="index.html#registerform" class="smoothscroll btn btn--stroke">
-                <span class="btn-header">Register</span>
-              </a>
+              <button
+              type="button"
+              class="btn btn-primary btn--stroke"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+            <span class="btn-header-register">Register</span>
+            </button>
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div style="background-color: #67a7a3 !important" class="modal-content">
+                  <div class="modal-header">
+                    <h2  class="modal-title" id="exampleModalLabel">
+                      Cảm ơn bạn đã quan tâm về chương trình. Hiện tại đã hết hạn đăng ký !
+                    </h2>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="d-flex flex-column input-group">
+                    <div class="container">
+                    <div class="search-wrapper" >
+                      <!-- <div >
+                        <input
+                        type="text"
+                        id="infoUser"
+                        class="form-control"
+                        placeholder="Username"
+                        aria-label="Username"
+                        aria-describedby="addon-wrapping"
+                      />
+                    </div> -->
+                    <!-- <div class="col-md-6">
+                      <button type="button" id="search" class="searchButton">
+                        Search
+                      </button>
+                   
+                  </div> -->
+                    <!-- <div id="searchResult">
+                      <h4>
+                        Ho va ten: <span id="name"></span>
+                      </h4>
+                      <h4>
+                        Sdt: <span id="phoneNumber"></span>
+                      </h4>
+                      <h4>
+                        Email: <span id="emailUser"></span>
+                      </h4>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
               <a href="index.html#about" class="smoothscroll btn btn--stroke">
                 <span class="btn-header">More About Us</span>
               </a>
