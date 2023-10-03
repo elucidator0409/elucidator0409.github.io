@@ -1,4 +1,4 @@
-// import {data} from "./dataUser"
+// import Mydata from "./dataUser"
 // const userInput = document.getElementById('inputUser'),
 // search =  document.getElementById('search'),
 // searchResult = document.getElementById('searchResult'),
@@ -7,6 +7,6 @@
 // email = document.getElementById('emailUser');
 // search.addEventListener('click', () => {
 //     let infoUser = userInput.value;
-//     let finalUrl = data;
+//     let finalUrl = `Mydata${infoUser}?fullText=True`;
 //     console.log(finalUrl)
 // })
