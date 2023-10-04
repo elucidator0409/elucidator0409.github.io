@@ -2627,6 +2627,9 @@ html.cl-loaded .home-content__main {
     /* overflow: hidden; */
     text-overflow: ellipsis;
     white-space: nowrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 }
 
