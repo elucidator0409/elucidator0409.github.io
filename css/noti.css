@@ -898,14 +898,14 @@ button.full-width {
 .btn--stroke,
 button.btn--stroke {
     background: #0a4e80 !important;
-    border: 0.2rem solid #39b54a;
+    /* border: 0.2rem solid #39b54a; */
     color: #39b54a;
 }
 
 .btn--stroke:hover,
 button.btn--stroke:hover {
     border: 0.2rem solid #000000;
-    color: #0a4e80;
+    /* color: #0a4e80; */
 }
 
 button::-moz-focus-inner,
@@ -1844,7 +1844,7 @@ input::-moz-focus-inner {
 
 .home-content__main {
     padding-top: 20rem;
-    position: relative;
+    /* position: relative; */
 }
 
 .home-content__buttons {
@@ -1871,7 +1871,7 @@ input::-moz-focus-inner {
     /* text-align: left; */
 
     align-items: center;
-
+    border-color: #0a4d80 !important;
     border-radius: 15px;
 }
 
@@ -1881,8 +1881,8 @@ input::-moz-focus-inner {
 
 .home-content__buttons .btn:hover,
 .home-content__buttons .btn:focus {
-    background: #ffffff !important;
-    color: #0a4e80;
+    /* background: #ffffff !important;
+    color: #0a4e80; */
 }
 
 .home-content__scroll {
@@ -4645,4 +4645,15 @@ footer .row {
     line-height: normal;
     text-align: center;
     padding: 3rem 3.5rem;
+}
+.s-contact .section-header .contact-content {
+    width: 100% !important;
+}
+.btn-header-register {
+    display: flex;
+    justify-content: center;
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 18px;
+    align-content: center;
+    align-items: center;
 }

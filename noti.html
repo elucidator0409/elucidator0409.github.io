@@ -161,9 +161,72 @@
         <div class="row-header home-content__main">
           <div class="home-content-layout">
             <div class="home-content__buttons">
-              <a href="index.html#registerform" class="smoothscroll btn btn--stroke">
-                <span class="btn-header">Register</span>
-              </a>
+              <button
+              type="button"
+              class="btn btn-primary btn--stroke"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+            <span class="btn-header-register">Register</span>
+            </button>
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div style="background-color: #67a7a3 !important" class="modal-content">
+                  <div class="modal-header">
+                    <h2  class="modal-title" id="exampleModalLabel">
+                      Cảm ơn bạn đã quan tâm về chương trình. Hiện tại đã hết hạn đăng ký !
+                    </h2>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="d-flex flex-column input-group">
+                    <div class="container">
+                    <div class="search-wrapper" >
+                      <!-- <div >
+                        <input
+                        type="text"
+                        id="infoUser"
+                        class="form-control"
+                        placeholder="Username"
+                        aria-label="Username"
+                        aria-describedby="addon-wrapping"
+                      />
+                    </div> -->
+                    <!-- <div class="col-md-6">
+                      <button type="button" id="search" class="searchButton">
+                        Search
+                      </button>
+                   
+                  </div> -->
+                    <!-- <div id="searchResult">
+                      <h4>
+                        Ho va ten: <span id="name"></span>
+                      </h4>
+                      <h4>
+                        Sdt: <span id="phoneNumber"></span>
+                      </h4>
+                      <h4>
+                        Email: <span id="emailUser"></span>
+                      </h4>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
               <a href="index.html#about" class="smoothscroll btn btn--stroke">
                 <span class="btn-header">More About Us</span>
               </a>
@@ -479,7 +542,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // Get the id from the query parameter
       const id = getQueryParam("id");
 
-
       // Fetch news data by id
       fetch(API_DOMAIN + `/api/news/${id}`, {
         method: "GET",
@@ -489,26 +551,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => response.json())
         .then((data) => {
-          const anchorElements = document.querySelectorAll('a.clients__slide');
-
-// Tạo một mảng để lưu trữ thông tin về các thẻ <a> và giá trị id
-const elementsWithId = [];
-
-// Lặp qua từng thẻ <a> và trích xuất giá trị id từ URL
-anchorElements.forEach((element) => {
-  const url = new URL(element.href);
-  const id = url.searchParams.get('id');
-  elementsWithId.push({ element, id });
-});
-
-// Sort id
-elementsWithId.sort((a, b) => b.id - a.id);
-
-// Loop and append position ID
-const container = document.querySelector('.slick-track'); 
-elementsWithId.forEach((item) => {
-  container.appendChild(item.element);
-});
           // Update the content area with news details
           document.getElementById("newsTitle").textContent = data.title;
           const imageUrl = API_DOMAIN + `/api/image?fileName=${data.imageSrc}`;
