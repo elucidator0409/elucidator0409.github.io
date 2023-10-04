@@ -170,10 +170,20 @@
         <div class="row-header home-content__main">
           <div class="home-content-layout">
             <div class="home-content__buttons">
-              <a href="index.html#registerform" class="smoothscroll btn btn--stroke btn-register">
-                <span class="btn-header">Register</span>
+              <a onclick="openSearchPopup()" class="smoothscroll btn btn--stroke btn-about">
+                <span class="btn-header">Search</span>
               </a>
-              <a href="index.html#about" class="smoothscroll btn btn--stroke btn-about">
+              
+              <div id="searchPopup" class="popup-search-container">
+                <h2>Search by Email</h2>
+                <input type="text" id="emailInput" placeholder="Enter an email to search...">
+                <button onclick="searchByEmail()">Search</button>
+                <div id="searchResults" style="margin-top: 10px;">
+                  <!-- Search results will be displayed here -->
+                </div>
+                <button onclick="closeSearchPopup()" style="margin-top: 5rem;">Close</button>
+              </div>
+              <a href="index.html#about" class="button-container smoothscroll btn btn--stroke btn-about">
                 <span class="btn-header">More About Us</span>
               </a>
             </div>
@@ -982,6 +992,48 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     </script>
     <!-- <a href="index.html#0" title="" class="clients__slide"><img src="images/noti-1.png" /></a> -->
+
+    
+<script>
+  function openSearchPopup() {
+    var popup = document.getElementById("searchPopup");
+    popup.style.display = "block";
+  }
+
+  function closeSearchPopup() {
+    var popup = document.getElementById("searchPopup");
+    popup.style.display = "none";
+  }
+
+  function searchByEmail() {
+    var emailToSearch = document.getElementById("emailInput").value;
+    var resultsContainer = document.getElementById("searchResults");
+    resultsContainer.innerHTML = ""; // Clear previous results
+
+    // Replace with actual data fetching logic (e.g., AJAX request)
+    fetch("mockdata.json")
+      .then(response => response.json())
+      .then(data => {
+        var foundUsers = data.filter(user => user.email === emailToSearch);
+        if (foundUsers.length === 0) {
+          resultsContainer.innerHTML = "No users found with that email.";
+        } else {
+          resultsContainer.innerHTML = "<h3>Search Results:</h3>";
+          var ul = document.createElement("ul");
+          foundUsers.forEach(user => {
+            var li = document.createElement("li");
+            li.textContent = "STT: " + user.stt + ", Name: " + user.lastname +" "+ user.firstname + ", Email: " + user.email;
+            ul.appendChild(li);
+          });
+          resultsContainer.appendChild(ul);
+        }
+      })
+      .catch(error => {
+        resultsContainer.innerHTML = "Error fetching data.";
+        console.error(error);
+      });
+  }
+</script>
   
   
   </body>
