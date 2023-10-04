@@ -183,26 +183,85 @@
         <div class="row-header home-content__main">
           <div class="home-content-layout">
             <div class="home-content__buttons">
-              <a onclick="openSearchPopup()" class="smoothscroll btn btn--stroke btn-about">
-                <span class="btn-header">Search</span>
-              </a>
-              
-              <div id="searchPopup" class="popup-search-container">
-                <h2>Search by Email/Phone</h2>
-                <input type="text" id="emailInput" placeholder="Enter an email/phone to search...">
-                <button onclick="searchByEmail()">Search</button>
-                <div id="searchResults" style="margin-top: 10px;">
-                  <!-- Search results will be displayed here -->
+              <button
+                onclick="openSearchPopup()"
+                type="button"
+                class="btn btn-primary btn--stroke"
+                data-toggle="modal"
+                data-target="#searchPopup"
+              >
+                <span class="btn-header-register">Search</span>
+              </button>
+              <div
+                class="modal fade"
+                id="searchPopup"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div
+                    style="background-color: #67a7a3 !important"
+                    class="modal-content"
+                  >
+                    <div class="modal-header">
+                      <h5
+                        style="align-self: center"
+                        class="modal-title"
+                        id="exampleModalLabel"
+                      >
+                        Tìm kiếm thông tin theo Email/Số điện thoại
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span
+                          style="font-size: 2.5rem !important"
+                          aria-hidden="true"
+                          >&times;</span
+                        >
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <input
+                        class="search-input"
+                        type="text"
+                        id="emailInput"
+                        placeholder="Enter an email/phone to search..."
+                      />
+                      <div
+                        id="searchButtonContainer"
+                        style="
+                          display: flex;
+                          justify-content: center;
+                          margin-bottom: 10px;
+                          align-items: center;
+                        "
+                      >
+                        <button onclick="searchByEmail()">
+                          <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                      <div id="searchResults"></div>
+                      <div class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <button onclick="closeSearchPopup()" style="margin-top: 5rem;">Close</button>
               </div>
-              <a href="index.html#about" class="button-container smoothscroll btn btn--stroke btn-about">
+              <a
+                href="index.html#about"
+                class="smoothscroll btn btn--stroke btn-about"
+              >
                 <span class="btn-header">More About Us</span>
               </a>
             </div>
           </div>
-        </div>
-              
         </div>
       </div>
       <ul class="home-social">
@@ -548,9 +607,8 @@
 
       <div class="row contact-content" data-aos="fade-up">
         <!-- <div class="contact-primary"> -->
-        
 
-          <!-- <form
+        <!-- <form
           name="contactForm"
           id="contactForm"
           method="post"
@@ -722,7 +780,6 @@
     <script src="js/main.js"></script>
     <!-- <script src="js/countdown.js"></script> -->
     <script src="js/scroll-to-top.js"></script>
-    <!-- <script src="js/dataUser.js"></script> -->
 
     <!-- <script defer
         src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854"
@@ -998,56 +1055,65 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     </script>
     <!-- validate number input -->
-   <!-- <script>
+    <!-- <script>
     document.getElementById('button-container').addEventListener('click', function() {
     alert('Cảm ơn bạn đã quan tâm về chương trình. Hiện tại đã hết hạn đăng ký');
 });
    </script> -->
-   
+
     <!-- <a href="index.html#0" title="" class="clients__slide"><img src="images/noti-1.png" /></a> -->
 
-    
-<script>
-  function openSearchPopup() {
-    var popup = document.getElementById("searchPopup");
-    popup.style.display = "block";
-  }
+    <script>
+      function openSearchPopup() {
+        var popup = document.getElementById("searchPopup");
+        popup.style.display = "block";
+      }
 
-  function closeSearchPopup() {
-    var popup = document.getElementById("searchPopup");
-    popup.style.display = "none";
-  }
+      function closeSearchPopup() {
+        var popup = document.getElementById("searchPopup");
+        popup.style.display = "none";
+      }
 
-  function searchByEmail() {
-    var emailToSearch = document.getElementById("emailInput").value;
-    var resultsContainer = document.getElementById("searchResults");
-    resultsContainer.innerHTML = ""; // Clear previous results
+      function searchByEmail() {
+        var emailToSearch = document.getElementById("emailInput").value;
 
-    // Replace with actual data fetching logic (e.g., AJAX request)
-    fetch("mockdata.json")
-      .then(response => response.json())
-      .then(data => {
-        var foundUsers = data.filter(user => user.email === emailToSearch || user.phone.toString() === emailToSearch);
-        if (foundUsers.length === 0) {
-          resultsContainer.innerHTML = "No users found with that email/phone.";
-        } else {
-          resultsContainer.innerHTML = "<h3>Search Results:</h3>";
-          var ul = document.createElement("ul");
-          foundUsers.forEach(user => {
-            var li = document.createElement("li");
-            li.textContent = "STT: " + user.stt + ", Name: " + user.lastname +" "+ user.firstname + ", Email: " + user.email;
-            ul.appendChild(li);
+        var resultsContainer = document.getElementById("searchResults");
+        resultsContainer.innerHTML = "";
+        // Clear previous results
+
+        // Replace with actual data fetching logic (e.g., AJAX request)
+        fetch("mockdata.json")
+          .then((response) => response.json())
+          .then((data) => {
+            var foundUsers = data.filter(
+              (user) =>
+                user.email === emailToSearch ||
+                user.phone.toString() === emailToSearch
+            );
+            if (foundUsers.length === 0) {
+              resultsContainer.innerHTML =
+                "No users found with that email/phone.";
+            } else {
+              resultsContainer.innerHTML = "<h3>Search Results:</h3>";
+              var ul = document.createElement("ul");
+              foundUsers.forEach((user) => {
+                var li = document.createElement("p");
+                var userInfoString =
+                "<h5>STT: " + user.stt + "</h5>" +
+  "<h5>Name: " + user.lastname + " " + user.firstname + "</h5>" +
+  "<h5>Email: " + user.email + "</h5>";
+li.innerHTML = userInfoString;
+                  
+                ul.appendChild(li);
+              });
+              resultsContainer.appendChild(ul);
+            }
+          })
+          .catch((error) => {
+            resultsContainer.innerHTML = "Error fetching data.";
+            console.error(error);
           });
-          resultsContainer.appendChild(ul);
-        }
-      })
-      .catch(error => {
-        resultsContainer.innerHTML = "Error fetching data.";
-        console.error(error);
-      });
-  }
-</script>
-  
-  
+      }
+    </script>
   </body>
 </html>
