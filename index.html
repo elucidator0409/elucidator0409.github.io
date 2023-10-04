@@ -201,17 +201,18 @@
               >
                 <div class="modal-dialog">
                   <div
-                    style="background-color: #67a7a3 !important"
+                    style="background-color: #0A4E80 !important;border: 1px solid #0A4E80 ;
+                    border-radius: 15px;"
                     class="modal-content"
                   >
                     <div class="modal-header">
-                      <h5
-                        style="align-self: center"
+                      <h2
+                        style="align-self: center; color: #66FFF2;"
                         class="modal-title"
                         id="exampleModalLabel"
                       >
-                        Tìm kiếm thông tin theo Email/Số điện thoại
-                      </h5>
+                      TRA CỨU THÔNG TIN
+                      </h2>
                       <button
                         type="button"
                         class="close"
@@ -219,7 +220,7 @@
                         aria-label="Close"
                       >
                         <span
-                          style="font-size: 2.5rem !important"
+                          style="font-size: 2.5rem !important; color: #FFA17A"
                           aria-hidden="true"
                           >&times;</span
                         >
@@ -230,7 +231,7 @@
                         class="search-input"
                         type="text"
                         id="emailInput"
-                        placeholder="Enter an email/phone to search..."
+                        placeholder=" Nhập SDT/Email đăng ký để tìm kiếm..."
                       />
                       <div
                         id="searchButtonContainer"
@@ -239,17 +240,16 @@
                           justify-content: center;
                           margin-bottom: 10px;
                           align-items: center;
+                          
                         "
                       >
-                        <button onclick="searchByEmail()">
-                          <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+                        <button style="background-color: #69A49E; border-radius: 20px; border: #0A4E80;"  onclick="searchByEmail()">
+                          <i style="color: #6BF6FF;" class="fa fa-search fa-2x" aria-hidden="true"></i>
                         </button>
                       </div>
 
                       <div id="searchResults"></div>
-                      <div class="spinner-border" role="status">
-                        <span class="sr-only">Loading...</span>
-                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -1088,19 +1088,24 @@ document.addEventListener("DOMContentLoaded", function () {
             var foundUsers = data.filter(
               (user) =>
                 user.email === emailToSearch ||
-                user.phone.toString() === emailToSearch
+                user.phone.toString() === emailToSearch.slice(1) ||
+                user.phone.toString() === emailToSearch 
+                
             );
             if (foundUsers.length === 0) {
-              resultsContainer.innerHTML =
-                "No users found with that email/phone.";
+              var messageParagraph = document.createElement('p');
+    messageParagraph.textContent = "Không tìm thấy thông tin của bạn. Vui lòng nhập đúng yêu cầu !";
+
+    // Gắn thẻ p vào phần tử có ID là "resultsContainer"
+    resultsContainer.appendChild(messageParagraph);
             } else {
-              resultsContainer.innerHTML = "<h4>Search Results:</h4>";
-              var ul = document.createElement("ul");
+              // resultsContainer.innerHTML = "<h2>Search Results:</h2>";
+              var ul = document.createElement("div");
               foundUsers.forEach((user) => {
                 var li = document.createElement("p");
                 var userInfoString =
                 "<h4>STT: " + user.stt + "</h4>" +
-  "<h4>Name: " + user.lastname + " " + user.firstname + "</h4>" +
+  "<h4>Họ tên: " + user.lastname + " " + user.firstname + "</h4>" +
   "<h4>Email: " + user.email + "</h4>";
 li.innerHTML = userInfoString;
                   

@@ -397,6 +397,7 @@
      -ms-appearance: none;
      -o-appearance: none;
      appearance: none;
+     font-size: 13px;
  }
  
  /* ===================================================================
