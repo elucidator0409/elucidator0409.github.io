@@ -188,8 +188,8 @@
               </a>
               
               <div id="searchPopup" class="popup-search-container">
-                <h2>Search by Email</h2>
-                <input type="text" id="emailInput" placeholder="Enter an email to search...">
+                <h2>Search by Email/Phone</h2>
+                <input type="text" id="emailInput" placeholder="Enter an email/phone to search...">
                 <button onclick="searchByEmail()">Search</button>
                 <div id="searchResults" style="margin-top: 10px;">
                   <!-- Search results will be displayed here -->
@@ -1027,9 +1027,9 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("mockdata.json")
       .then(response => response.json())
       .then(data => {
-        var foundUsers = data.filter(user => user.email === emailToSearch);
+        var foundUsers = data.filter(user => user.email === emailToSearch || user.phone.toString() === emailToSearch);
         if (foundUsers.length === 0) {
-          resultsContainer.innerHTML = "No users found with that email.";
+          resultsContainer.innerHTML = "No users found with that email/phone.";
         } else {
           resultsContainer.innerHTML = "<h3>Search Results:</h3>";
           var ul = document.createElement("ul");
