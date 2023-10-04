@@ -1094,14 +1094,14 @@ document.addEventListener("DOMContentLoaded", function () {
               resultsContainer.innerHTML =
                 "No users found with that email/phone.";
             } else {
-              resultsContainer.innerHTML = "<h3>Search Results:</h3>";
+              resultsContainer.innerHTML = "<h4>Search Results:</h4>";
               var ul = document.createElement("ul");
               foundUsers.forEach((user) => {
                 var li = document.createElement("p");
                 var userInfoString =
-                "<h5>STT: " + user.stt + "</h5>" +
-  "<h5>Name: " + user.lastname + " " + user.firstname + "</h5>" +
-  "<h5>Email: " + user.email + "</h5>";
+                "<h4>STT: " + user.stt + "</h4>" +
+  "<h4>Name: " + user.lastname + " " + user.firstname + "</h4>" +
+  "<h4>Email: " + user.email + "</h4>";
 li.innerHTML = userInfoString;
                   
                 ul.appendChild(li);
