@@ -3716,7 +3716,7 @@ html.cl-loaded .home-content__main {
 .contact-secondary .contact-info {
     position: relative;
     text-align: start;
-    margin-top: 10rem;
+    margin-top: 25rem;
     text-align: center;
 }
 @media screen and (max-width:576px) {
