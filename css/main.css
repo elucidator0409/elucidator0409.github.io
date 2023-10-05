@@ -2019,14 +2019,15 @@ font-size: 19px;
     font-size: 14px; 
 }
 .home-content__buttons .btn {
-    /* display: flex; */
+    display: flex;
     width: 215px;
+    justify-content: center;
     color: #ffffff !important;
     margin: 1.5rem 1.5rem 2.5rem 0;
     letter-spacing: 0.25rem;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    /* text-align: left; */
+    text-align: center;
     position: relative;
     align-items: center;
     border-color: #0a4d80 !important;
@@ -2305,7 +2306,8 @@ html.cl-loaded .home-content__main {
         /* margin: initial; */
         display: flex;
         margin-left: 0;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: left;
     }
 
 }
@@ -2317,18 +2319,26 @@ html.cl-loaded .home-content__main {
         padding-top: 2.2rem;
         /* margin: initial; */
         display: flex;
-        margin-left: 0;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: left;
     }
     .home-content__buttons .btn {
-        display: -webkit-inline-box;
-        width: fit-content;
-        height: auto;
-        margin: 0 0 0 0;
-        left: 10%;
+        display: flex;
+    width: 20%;
+    height: auto;
+    margin: 0 0 0 0;
+    left: 1%;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    font-size: 8px;
+    letter-spacing: 0rem;
     }
     .home-content__buttons .btn-about {
-        display: none;
+        display: flex;
+        width: 20%;
+        height: auto;
+      
     }
 }
 @media (max-width: 700px) {
@@ -4749,15 +4759,7 @@ p {
     display: flex;
     margin-bottom: 40px;
 }
-.btn-header {
-    display: flex;
-    justify-content: center;
-    font-family: "SVN-Gilroy", sans-serif;
-    font-size: 18px;
-    align-content: center;
-    align-items: center;
-    padding-top: 1rem;
-}
+
 /*# sourceMappingURL=main.css.map */
 
 /* 
@@ -4971,4 +4973,26 @@ p {
 }
 .close {
     opacity: unset !important;
+}
+
+@media   (max-width:500px) {
+    .modal-dialog {
+        width: 80% !important;
+        margin: 0 auto !important;
+        height: auto;
+    }
+}
+.btn-header {
+    display: flex;
+    justify-content: center;
+    font-family: "SVN-Gilroy", sans-serif;
+    font-size: 18px;
+    align-content: center;
+    align-items: center;
+}
+@media (max-width:500px) {
+    .btn-header {
+        font-size: 7px;
+        letter-spacing: 0;
+    }
 }
