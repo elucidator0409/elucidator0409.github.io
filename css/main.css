@@ -3597,7 +3597,7 @@ html.cl-loaded .home-content__main {
 }
 
 .contact-primary {
-    width: 55%;
+    /* width: 55%; */
 }
 
 .contact-primary #contactForm {
@@ -3710,7 +3710,7 @@ html.cl-loaded .home-content__main {
 }
 
 .contact-secondary {
-    width: 45%;
+    width: 100%;
 }
 
 .contact-secondary::before {
