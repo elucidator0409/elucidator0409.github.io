@@ -867,90 +867,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Fetch news data from the API
       console.log(API_DOMAIN + "/api/news");
-
       fetch(API_DOMAIN + "/api/news", {
+  method: "GET",
+  headers: {
+    "ngrok-skip-browser-warning": "69420",
+  },
+})
+  .then((response) => response.json())
+  .then((data) => {
+    // sort b>a
+    data.sort((a, b) => b.id - a.id);
+
+    const clientsContainer = document.querySelector(".clients");
+
+    // Loop through the sorted news data and create image links
+    const loadAllImagesPromise = data.map((news) => {
+      const imageUrl = API_DOMAIN + `/api/image?fileName=${news.imageSrc}`;
+
+      return fetch(imageUrl, {
         method: "GET",
         headers: {
           "ngrok-skip-browser-warning": "69420",
         },
+        mode: "cors", // Set the mode to 'cors' to avoid CORB
       })
-        .then((response) => response.json())
-        .then((data) => {
-          const clientsContainer = document.querySelector(".clients");
+        .then((imageResponse) => imageResponse.blob())
+        .then((blobData) => {
+          // Convert the blob to an object URL
+          const imgObjectUrl = URL.createObjectURL(blobData);
 
-          // Loop through the news data and create image links
+          // Create the template string with dynamic values
+          const template = `
+            <a href="noti.html?id=${news.id}" title="" class="clients__slide">
+              <img src="${imgObjectUrl}" style="width:100%; height:auto; margin-bottom:1.5rem;"/> 
+              <h5 style="font-family: 'SVN-Gilroy', sans-serif; font-size: 26px; font-weight: 700; line-height: 31px; letter-spacing: 0em; text-align: left; color:#205D86;"> ${news.title} </h5>
+            </a>
+          `;
 
-          const loadAllImagesPromise = data.map((news) => {
-            const imageUrl =
-              API_DOMAIN + `/api/image?fileName=${news.imageSrc}`;
+          // Convert the template string to a DOM element
+          const templateElement = document
+            .createRange()
+            .createContextualFragment(template);
 
-            return fetch(imageUrl, {
-              method: "GET",
-              headers: {
-                "ngrok-skip-browser-warning": "69420",
-              },
-              mode: "cors", // Set the mode to 'cors' to avoid CORB
-            })
-              .then((imageResponse) => imageResponse.blob())
-              .then((blobData) => {
-                // Convert the blob to an object URL
-                const imgObjectUrl = URL.createObjectURL(blobData);
-
-                // Create the template string with dynamic values
-                const template = `
-                
-                  <a href="noti.html?id=${news.id}" title="" class="clients__slide">
-                  <img src="${imgObjectUrl}" style="width:100%; height:auto; margin-bottom:1.5rem;"/> 
-                  <h5  style="font-family: 'SVN-Gilroy', sans-serif; font-size: 26px; font-weight: 700; line-height: 31px; letter-spacing: 0em; text-align: left; color:#205D86;"> ${news.title}  </h5>
-              </a>
-              
-             
-              `;
-
-                // Convert the template string to a DOM element
-                const templateElement = document
-                  .createRange()
-                  .createContextualFragment(template);
-
-                // Append the template element to the clients container
-                clientsContainer.appendChild(templateElement);
-              });
-          });
-
-          Promise.all(loadAllImagesPromise)
-            .then(() => {
-              loadJS("js/slider.js", false);
-            })
-            .catch((imageError) => {
-              console.error("Error fetching image:", imageError);
-            });
-
-          console.log("Fetch completed");
-        })
-        .catch((error) => {
-          console.error("Error fetching news:", error);
+          // Append the template element to the clients container
+          clientsContainer.appendChild(templateElement);
         });
-    </script>
+    });
 
-    <!-- slide autoplay -->
-    <script>
-      var myIndex = 0;
-      carousel();
+    // Wait for all images to load
+    Promise.all(loadAllImagesPromise)
+      .then(() => {
+        loadJS("js/slider.js", false);
+      })
+      .catch((imageError) => {
+        console.error("Error fetching image:", imageError);
+      });
 
-      function carousel() {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";
-        }
-        myIndex++;
-        if (myIndex > x.length) {
-          myIndex = 1;
-        }
-        x[myIndex - 1].style.display = "block";
-        setTimeout(carousel, 3000); // Change image every 3 seconds
-      }
-    </script>
+    console.log("Fetch completed");
+  })
+  .catch((error) => {
+    console.error("Error fetching news:", error);
+  });
+</script>
+
+
     <!-- validate number input -->
     <!-- <script>
     document.getElementById('button-container').addEventListener('click', function() {

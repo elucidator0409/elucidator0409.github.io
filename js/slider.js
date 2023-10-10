@@ -8,7 +8,7 @@ var clSlickSlider = function() {
         dots: true,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 2,
+        slidesToScroll: 3,
         //autoplay: true,
         pauseOnFocus: false,
         autoplaySpeed: 1000,
