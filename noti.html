@@ -149,55 +149,86 @@
         <span class="header-menu-icon"></span>
       </a>
     </header>
-    <section
-      id="home"
-      class="s-home target-section"
-      data-parallax="scroll"
-      background-position:
-      center
-      center;
-    >
+    <section id="home" class="s-home target-section" data-parallax="scroll">
       <div class="home-content">
         <div class="row-header home-content__main">
           <div class="home-content-layout">
             <div class="home-content__buttons">
               <button
-              type="button"
-              class="btn btn-primary btn--stroke"
-              data-toggle="modal"
-              data-target="#exampleModal"
-            >
-            <span class="btn-header-register">Register</span>
-            </button>
-            <div
-              class="modal fade"
-              id="exampleModal"
-              tabindex="-1"
-              aria-labelledby="exampleModalLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div style="background-color: #67a7a3 !important" class="modal-content">
-                  <div class="modal-header">
-                    <h2  class="modal-title" id="exampleModalLabel">
-                      Cảm ơn bạn đã quan tâm về chương trình. Hiện tại đã hết hạn đăng ký !
-                    </h2>
-                    <button
-                      type="button"
-                      class="close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">&times;</span>
-                    </button>
+                onclick="openSearchPopup()"
+                type="button"
+                class="btn btn-primary btn--stroke"
+                data-toggle="modal"
+                data-target="#searchPopup"
+              ><span class="btn-header">Attendee List</span>
+               <!-- <span class="btn-header-register">Attendee List</span> -->
+              </button>
+              <div
+                class="modal fade"
+                id="searchPopup"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div
+                    style="background-color: #0A4E80 !important;border: 1px solid #0A4E80 ;
+                    border-radius: 15px;"
+                    class="modal-content"
+                  >
+                    <div class="modal-header">
+                      <h2
+                        style="align-self: center; color: #66FFF2;"
+                        class="modal-title"
+                        id="exampleModalLabel"
+                      >
+                      TRA CỨU THÔNG TIN
+                      </h2>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span
+                          style="font-size: 2.5rem !important; color: #FFA17A"
+                          aria-hidden="true"
+                          >&times;</span
+                        >
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <input
+                        class="search-input"
+                        type="text"
+                        id="emailInput"
+                        placeholder=" Nhập SDT/Email đăng ký để tìm kiếm..."
+                      />
+                      <div
+                        id="searchButtonContainer"
+                        style="
+                          display: flex;
+                          justify-content: center;
+                          margin-bottom: 10px;
+                          align-items: center;
+                          
+                        "
+                      >
+                        <button style="background-color: #69A49E; border-radius: 20px; border: #0A4E80;"  onclick="searchByEmail()">
+                          <i style="color: #6BF6FF;" class="fa fa-search fa-2x" aria-hidden="true"></i>
+                        </button>
+                      </div>
+
+                      <div id="searchResults"></div>
+                      
+                    </div>
                   </div>
-                 
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-              <a href="index.html#about" class="smoothscroll btn btn--stroke">
+              <a
+                href="index.html#about"
+                class="smoothscroll btn btn--stroke btn-about"
+              >
                 <span class="btn-header">More About Us</span>
               </a>
             </div>
@@ -206,23 +237,17 @@
       </div>
       <ul class="home-social">
         <li>
-          <a
-            href="https://www.facebook.com/ATCollabotechnologyschool"
-            target="_blank"
+          <a href="https://www.facebook.com/ATCollaboAcademy" target="_blank"
             ><i class="fa fa-facebook"></i
           ></a>
         </li>
         <li>
-          <a
-            href="https://www.youtube.com/@ATCollaboTechnologySchool"
-            target="_blank"
+          <a href="https://www.youtube.com/@ATCollaboAcademy" target="_blank"
             ><i class="fa fa-youtube"></i
           ></a>
         </li>
         <li>
-          <a
-            href=" https://www.linkedin.com/company/98254227/admin/feed/posts/"
-            target="_blank"
+          <a href="https://www.linkedin.com/company/atcollabo" target="_blank"
             ><i class="fa fa-linkedin"></i
           ></a>
         </li>

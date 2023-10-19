@@ -677,7 +677,6 @@ select {
     font-size: 1.4rem;
     line-height: 3rem;
     max-width: 100%;
-    background: transparent;
     border-bottom: 2px solid rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -1861,7 +1860,8 @@ input::-moz-focus-inner {
 }
 
 .home-content__buttons .btn {
-    /* display: flex; */
+    display: flex;
+    justify-content: center;
     width: 215px;
     color: #ffffff;
     margin: 1.5rem 1.5rem 2.5rem 0;
@@ -4459,13 +4459,13 @@ footer .row {
 /* placeholder */
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: red;
+    color: #0E4D80;
     opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: red;
+    color: #0E4D80;
 }
 
 ::-ms-input-placeholder {
@@ -4527,7 +4527,6 @@ footer .row {
     font-size: 18px;
     align-content: center;
     align-items: center;
-    padding-top: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
 
@@ -4656,4 +4655,40 @@ footer .row {
     font-size: 18px;
     align-content: center;
     align-items: center;
+}
+.search-input {
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+    padding: 1rem 0;
+    margin-bottom: 10px;
+}
+.contact-content input::-webkit-input-placeholder,
+.contact-content select::-webkit-input-placeholder,
+.contact-content textarea::-webkit-input-placeholder {
+    color: #0E4D80;
+}
+.contact-content input:-moz-placeholder,
+.contact-content select:-moz-placeholder,
+.contact-content textarea:-moz-placeholder {
+    color: #0E4D80; /* Firefox 18- */
+}
+.contact-content input::-moz-placeholder,
+.contact-content select::-moz-placeholder,
+.contact-content textarea::-moz-placeholder {
+    color: #4ad9cc; /* Firefox 19+ */
+}
+.contact-content input:-ms-input-placeholder,
+.contact-content select:-ms-input-placeholder,
+.contact-content textarea:-ms-input-placeholder {
+    color: #0E4D80;
+}
+.contact-content input.placeholder,
+.contact-content select.placeholder,
+.contact-content textarea.placeholder {
+    color: #0E4D80 !important;
+    font-size: 13px !important;
+}
+.placeholder {
+    color: #828282 !important;
 }
