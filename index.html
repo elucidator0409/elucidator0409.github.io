@@ -964,9 +964,10 @@ document.addEventListener("DOMContentLoaded", function () {
           .then((data) => {
             var foundUsers = data.filter(
               (user) =>
-                user.email === emailToSearch ||
-                user.phone.toString() === emailToSearch.slice(1) ||
-                user.phone.toString() === emailToSearch 
+                user.email === emailToSearch 
+                // ||
+                // user.phone.toString() === emailToSearch.slice(1) ||
+                // user.phone.toString() === emailToSearch 
                 
             );
             if (foundUsers.length === 0) {
@@ -982,8 +983,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 var li = document.createElement("p");
                 var userInfoString =
                 
-  "<h4>Họ tên: " + user.lastname + " " + user.firstname + "</h4>" +
-  "<h4>Email: " + user.email + "</h4>";
+  "<h4>No: " + user.no + " " + "</h4>" +
+  "<h4>Email: " + user.email + "</h4>" +
+  "<h4>Score round 1: " + user.score + "</h4>"+ 
+  "<h4>Result round 1: " + user.result + "</h4>";
 li.innerHTML = userInfoString;
                   
                 ul.appendChild(li);
